@@ -1,0 +1,1 @@
+- on most RDBMS, explicit physical locks (SELECT ... FOR UPDATE) can only prevent record modifications for database records that existed at the time of locking while future records can be added.

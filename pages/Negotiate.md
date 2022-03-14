@@ -1,0 +1,2 @@
+- RFC4559, Section 3
+- This authentication scheme violates both HTTP semantics (being connection-oriented) and syntax (use of syntax incompatible with the WWW-Authenticate and Authorization header field syntax).

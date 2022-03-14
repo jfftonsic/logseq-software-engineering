@@ -1,0 +1,4 @@
+- [[OpenAPIs]] is a machine-readable interface file specification for describing, generating, consuming, and visualising RESTful web services.
+  title:: OpenAPIs
+- OpenAPI 3.0 is the latest version of the OpenAPI Specification, an open-source format for describing and documenting APIs.
+- previously known as the Swagger Specification
