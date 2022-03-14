@@ -1,3 +1,5 @@
+tags:: Databases, Relational Databases
+
 - [[Common Table Expression]]
 - types:
 	- <table border="1">
