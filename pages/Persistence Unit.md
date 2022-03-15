@@ -1,0 +1,2 @@
+- In [[Java]]
+	- A persistence unit defines the set of all classes that are related or grouped by the application, and which must be colocated in their mapping to a single database.
