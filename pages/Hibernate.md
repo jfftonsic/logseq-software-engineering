@@ -2,13 +2,14 @@ tags:: #Frameworks
 
 - ![image.png](../assets/image_1647302053648_0.png)
 - `org.hibernate.SessionFactory`
-	- You would need one SessionFactory object per database using a separate configuration file. So, if you are using multiple databases, then you would have to create multiple SessionFactory objects.
+	- You would need one SessionFactory object per database using a separate configuration file. So, if you are using multiple databases, then you would have to create multiple `SessionFactory` objects.
 	  The internal state of a SessionFactory is **immutable**.
 	  This internal state includes **all of the metadata about Object/Relational Mapping**.
 - [[Transaction]]-related
 	- important classes:
 		- `org.hibernate.Session`
 		  id:: 622fd6c4-e34c-47af-b549-1f55f7ba6fab
+		  alias:: Session
 		  collapsed:: true
 			- used to get a physical connection with a database
 			- is lightweight and designed to be instantiated each time an interaction is needed with the database.
@@ -21,6 +22,7 @@ tags:: #Frameworks
 			- Changes to persistent instances are detected at flush time and also result in an SQL UPDATE.
 			- If the Session throws an exception, the transaction must be rolled back and the session discarded.
 			- sample code:
+			  collapsed:: true
 				- ```java
 				     Session sess = factory.openSession();
 				     Transaction tx;
@@ -41,6 +43,84 @@ tags:: #Frameworks
 		- `org.hibernate.Transaction`
 			- A transaction is associated with a ((622fd6c4-e34c-47af-b549-1f55f7ba6fab)) and is usually initiated by a call to `Session.beginTransaction()`. A single session might span multiple transactions since the notion of a session (a conversation between the application and the datastore) is of coarser granularity than the notion of a transaction. However, it is intended that there be at most one uncommitted transaction associated with a particular Session at any time.
 		- `org.hibernate.engine.transaction.internal.TransactionImpl`
-		-
+			- #+BEGIN_TIP
+			  If you want some interesting debugging logs, configure DEBUG logger for this class. It will print transaction creations, commits, rollbacks
+			  #+END_TIP
+		- `org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor`
+		  id:: 622fd7e9-d5c5-49aa-bef5-acf9c7d419da
+			- collapsed:: true
+			  #+BEGIN_TIP
+			  If you want some interesting debugging logs, configure TRACE logger for this class. It will log lots of important things, see a list on the potentially collapsed sub-block
+			  #+END_TIP
+				- ```text
+				  LogicalConnection#afterStatement
+				  LogicalConnection#beforeTransactionCompletion
+				  LogicalConnection#afterTransaction
+				  Preparing to begin transaction via JDBC Connection.setAutoCommit(false)
+				  Transaction begun via JDBC Connection.setAutoCommit(false)
+				  Preparing to commit transaction via JDBC Connection.commit()
+				  Transaction committed via JDBC Connection.commit()
+				  re-enabling auto-commit on JDBC Connection after completion of JDBC-based transaction
+				  Could not re-enable auto-commit on JDBC Connection after completion of JDBC-based transaction
+				  Preparing to rollback transaction via JDBC Connection.rollback()
+				  Transaction rolled-back via JDBC Connection.rollback()
+				  Unable to ascertain initial auto-commit state of provided connection; assuming auto-commit
+				  ```
 -
+- Named queries
+	- naming strategy
+		- you pass your custom name where you use the query (which seems less prone to refactory problems.)
+		- if you don't want to have to specify a name, the default is this syntax: `[entity class name].[name of the invoked query method]`.
+	- through properties file
+		- you can put the query on spring boot properties file
+		- or [this post](https://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-creating-database-queries-with-named-queries/) says
+		  > We can declare named queries by adding them into the jpa-named-queries.properties file that is found from the META-INF folder of our classpath.
+	- through annotations
+		- one advantage I can see: the query stays as close as possible as the structure of the data
+		- `@NamedQuery`, `@NamedNativeQuery`
+		  ```java
+		  @Entity
+		  @NamedQuery(name = "Todo.findByTitleIs",
+		          query = "SELECT t FROM Todo t WHERE t.title = 'title'"
+		  )
+		  @Table(name = "todos")
+		  final class Todo {
+		       
+		  }
+		  ```
+	- seems like if your repository's method parameter has the same name as the named parameter you use inside your query, it works. If it doesn't, or the name differs, you can specify it, e.g.:
+	  ```java
+	  List<Todo> findBySearchTermNamed(@Param("searchTerm") String searchTerm);
+	  ```
 -
+- ResultSet mapping
+	- When using custom native queries and you want to map it to an entity:
+	  
+	  
+	  
+	  ```java
+	  
+	      Query q = em.createNativeQuery(
+	          "SELECT o.id AS order_id, " +
+	              "o.quantity AS order_quantity, " +
+	              "o.item AS order_item, " +
+	              "i.name AS item_name, " +
+	          "FROM Order o, Item i " +
+	          "WHERE (order_quantity > 25) AND (order_item = i.id)",
+	      "OrderResults");
+	      
+	      @SqlResultSetMapping(name="OrderResults", 
+	          entities={ 
+	              @EntityResult(entityClass=com.acme.Order.class, fields={
+	                  @FieldResult(name="id", column="order_id"),
+	                  @FieldResult(name="quantity", column="order_quantity"), 
+	                  @FieldResult(name="item", column="order_item")})},
+	          columns={
+	              @ColumnResult(name="item_name")}
+	      )
+	  ```
+	  
+	  
+	  #+BEGIN_PINNED
+	  <mark style="background-color: orange">I don't know what happens to `item_name` in the example above since it is not a field on Order class.</mark>
+	  #+END_PINNED

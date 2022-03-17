@@ -1,0 +1,2 @@
+- Useful plugins:
+	- https://github.com/unbroken-dome/gradle-testsets-plugin :
