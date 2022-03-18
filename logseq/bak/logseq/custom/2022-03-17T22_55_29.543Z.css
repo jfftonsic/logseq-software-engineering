@@ -1,0 +1,13 @@
+@import url("https://cdn.jsdelivr.net/gh/pengx17/logseq-dev-theme@main/custom.css");
+
+:root {
+	--ls-main-content-max-width: 8100px;
+	
+}
+
+/* table { */
+	/* max-width: 10000px; */
+    /* overflow-x: auto; */
+    /* width: 100%; */
+	/* white-space: nowrap; */
+  /* } */

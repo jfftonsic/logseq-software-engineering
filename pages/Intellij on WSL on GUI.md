@@ -1,0 +1,3 @@
+- Follow [[Jetbrains toolbox on WSL on GUI]]
+- Install Intellij from that
+-
