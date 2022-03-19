@@ -5,5 +5,6 @@
 	- {{query #WIP}}
 	  query-table:: false
 	-
+- [[Logseq plugins used with this knowledge base]]
 - [[Software Engineering]]
 - Frameworks
