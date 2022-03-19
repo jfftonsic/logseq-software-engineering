@@ -3,5 +3,3 @@
 - [[Intellij on WSL on GUI]]
 - [[WSL Ubuntu with GUI]]
 - [[Fuzzy bash history search tool]]
--
--

@@ -1,1 +1,4 @@
 - [[Feign]]
+- Some gotchas to remember
+	- status 401 (unauthorized) happens when you try to access a resource (that requires authentication) without authentication
+	- status 403 (forbidden) happens when you are authenticated but don't have the granted authorities required by that endpoint.
