@@ -26,8 +26,7 @@
 		          // do nothing, Testcontainers handles container shutdown
 		      }
 		  }
-		  ```
-		- ```java
+		  
 		  @SpringBootTest
 		  @ExtendWith(PostgreSQLExtension.class)
 		  @DirtiesContext
@@ -35,8 +34,10 @@
 		      // just the test code
 		  }
 		  ```
+		  #sample #java #junit #spring #testcontainers
 - Asserts for JSON payloads:
   sources:: https://www.baeldung.com/jsonassert, http://jsonassert.skyscreamer.org/
+  collapsed:: true
 	- org.skyscreamer:jsonassert:1.5.0
 		- check the current version: https://mvnrepository.com/artifact/org.skyscreamer/jsonassert
 	- samples:
@@ -64,4 +65,37 @@
 		    "{id:123,name:\"John\"}", actual, JSONCompareMode.LENIENT);
 		  ```
 -
--
+- Testing exception throws
+  collapsed:: true
+	- sample code
+		- ```java
+		  @Test
+		  void testExpectedException() {
+		  
+		  	NumberFormatException thrown = Assertions.assertThrows(NumberFormatException.class, () -> {
+		  		Integer.parseInt("One");
+		  	}, "NumberFormatException was expected");
+		  	
+		  	Assertions.assertEquals("For input string: \"One\"", thrown.getMessage());
+		  }
+		  
+		  @Test
+		  void testExpectedExceptionWithParentType() {
+		  
+		  	Assertions.assertThrows(IllegalArgumentException.class, () -> {
+		  		Integer.parseInt("One");
+		  	});
+		  }
+		  
+		  @Test
+		  void testExpectedExceptionFail() {
+		   
+		  	NumberFormatException thrown = Assertions
+		  				.assertThrows(NumberFormatException.class, () -> {
+		  					Integer.parseInt("1");
+		  				}, "NumberFormatException error was expected");
+		  	
+		  	Assertions.assertEquals("Some expected message", thrown.getMessage());
+		  }
+		  ```
+		  #sample #java #junit #testing

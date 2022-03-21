@@ -32,6 +32,7 @@ sources:: https://docs.spring.io/spring-boot/docs/current/api/org/springframewor
 	    }
 	  }
 	  ```
+	  #jpa #junit #spring #sample
 -
 - Creating the Database Schema
 	- Using Hibernate’s ddl-auto
@@ -42,7 +43,7 @@ sources:: https://docs.spring.io/spring-boot/docs/current/api/org/springframewor
 		- We can control whether the schema.sql file should be executed with the property `spring.datasource.initialization-mode`. The default value is `embedded`, meaning it will only execute for an embedded database (i.e. in our tests). If we set it to `always`, it will always execute.
 		- It makes sense to set Hibernate’s `ddl-auto` configuration to `validate` when using a script to initialize the schema, so that Hibernate checks if the created schema matches the entity classes on startup:
 			- ```java
-			  @ExtendWith(SpringExtension.class)
+			  // setting Hibernate’s `ddl-auto` configuration to `validate` so that Hibernate checks if the created schema matches the entity classes on startup
 			  @DataJpaTest
 			  @TestPropertySource(properties = {
 			          "spring.jpa.hibernate.ddl-auto=validate"
@@ -51,6 +52,7 @@ sources:: https://docs.spring.io/spring-boot/docs/current/api/org/springframewor
 			    ...
 			  }
 			  ```
+			  #jpa #junit #spring #sample #hibernate
 	- Using [[Liquibase]]
 		- [[Spring Boot + Liquibase]]
 -
@@ -63,9 +65,7 @@ sources:: https://docs.spring.io/spring-boot/docs/current/api/org/springframewor
 			- ```java
 			  @Test
 			  void whenSaved_thenFindsByName() {
-			    userRepository.save(new UserEntity(
-			            "Zaphod Beeblebrox",
-			            "zaphod@galaxy.net"));
+			    userRepository.save(new UserEntity("Zaphod Beeblebrox", "zaphod@galaxy.net"));
 			    assertThat(userRepository.findByName("Zaphod Beeblebrox")).isNotNull();
 			  }
 			  ```
@@ -85,6 +85,7 @@ sources:: https://docs.spring.io/spring-boot/docs/current/api/org/springframewor
 				  ```
 			- java
 				- ```java
+				  /** Using a SQL file to initialize the test DB */
 				  @DataJpaTest
 				  class SqlTest {
 				  
@@ -100,11 +101,12 @@ sources:: https://docs.spring.io/spring-boot/docs/current/api/org/springframewor
 				  
 				  }
 				  ```
+				  #jpa #junit #spring #sample #sql
 	- Using data.sql
 		- #+BEGIN_CAUTION
 		  not a good approach
 		  #+END_CAUTION
-			- A data.sql file forces us to put all our insert statements into a single place. Every single test will depend on this one script to set up the database state. This script will soon become very large and hard to maintain
+			- A `data.sql` file forces us to put all our insert statements into a single place. Every single test will depend on this one script to set up the database state. This script will soon become very large and hard to maintain
 	- Using [[Spring DBUnit]]
 	  sources:: https://springtestdbunit.github.io/spring-test-dbunit/index.html, http://dbunit.sourceforge.net/
 	  collapsed:: true
