@@ -1,3 +1,16 @@
+- Open-source databases
+  sources:: https://www.jooq.org/download/#databases
+	- [[Derby]]
+	  [[Firebird]]
+	  [[H2]]
+	  [[HSQLDB]]
+	  [[Ignite]]
+	  [[MariaDB]]
+	  [[MySQL]]
+	  [[PostgreSQL]]
+	  [[SQLite]]
+	  [[YugabyteDB]]
+- [[Relationship between database related components]]
 - [[Database Migration]]
 - [[PostgreSQL]]
 - [[DB Transactional Locks]]
@@ -12,3 +25,4 @@
 - [Aggregate-Oriented Databases in NoSQL](https://www.geeksforgeeks.org/aggregate-oriented-databases-in-nosql/) #WIP
 - [Challenges of NoSQL](https://www.geeksforgeeks.org/challenges-of-nosql/) #WIP
 - https://www.geeksforgeeks.org/commonly-asked-dbms-interview-questions #WIP
+-

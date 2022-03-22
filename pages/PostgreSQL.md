@@ -1,4 +1,4 @@
-tags:: Databases, Relational Databases
+tags:: Database, Relational Databases
 
 - [[Common Table Expression]]
 - types:

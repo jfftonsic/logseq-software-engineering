@@ -99,5 +99,13 @@ sources:: https://attacomsian.com/blog/spring-data-jpa-query-annotation, https:/
 		  Page<User> userPage = userRepository.findByActive(true, pageable);
 		  ```
 -
+- Spring Data JPA
+	- https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
+	- https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa
+	- https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#orm
 -
+- Spring JDBC
+	- https://www.baeldung.com/spring-data-jdbc-intro
+	- https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#data.sql.jdbc
+	- https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#jdbc
 -

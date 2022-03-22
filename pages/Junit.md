@@ -1,3 +1,6 @@
+- What does `@Transactional` mean if you annotate your test suite with it?
+  #jpa #transaction #database
+	- That every test method in your suite is surrounded by an overarching Spring transaction. This transaction will be rolled back at the end of the test method regardless of it's outcome.
 - Using [[Test Fixtures]] to initialize a [[PostgreSQL]] [[Testcontainer]] and prepare system properties for a follow-up [[Spring Boot Test]]
 	- code:
 	  collapsed:: true

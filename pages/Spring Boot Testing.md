@@ -3,7 +3,11 @@ alias:: Spring Boot Test
 - The Spring test process fires up **one or more instances of the Spring container** to run tests on. If it thinks the config is exactly the same for two tests it will **re-use an instance**, otherwise it will start a new one.
 	- The instances are shared to avoid needing to start a whole new [[Spring Boot]] application for each test.
 	- The problem is that the **instances may share some resources, such as databases and network ports**. Therefore _errors might occur from trying to start multiple instances at the same time_.
+- TestPropertySource
+  collapsed:: true
+	- {{embed [[TestPropertySource]]}}
 - Spring Boot MVC Tests
+  collapsed:: true
 	- `@WebMvcTest`: to test controllers 
 	  sources:: [Auto-configured Spring MVC Tests](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.testing.spring-boot-applications.spring-mvc-tests)
 		- limits scanned beans to `@Controller, @ControllerAdvice, @JsonComponent, Converter, GenericConverter, Filter, HandlerInterceptor, WebMvcConfigurer, WebMvcRegistrations, and HandlerMethodArgumentResolver`. Regular `@Component` and `@ConfigurationProperties` beans are not scanned when the @WebMvcTest annotation is used.
