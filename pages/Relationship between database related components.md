@@ -14,7 +14,8 @@
 		  Rel(personAlias, containerAlias, "Label", "Optional Technology")
 		  @enduml
 		  ```
-	- {{renderer code_diagram,plantuml}}
+	- Unfortunately, the diagram plugin uses a thing called [Kroki](https://docs.kroki.io/kroki/) to generate the diagram, and Kroki does not point to the latest plantuml `C4_Container.puml` source. Then it cannot render the diagram below.
+	  So what I'm gonna do is: put the puml source here (that works with this [plantuml site](https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000), and also with the Intellij plantuml plugin), generate an image and put here.
 		- ```plantuml
 		  @startuml
 		  !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml

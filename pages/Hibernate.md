@@ -124,3 +124,14 @@ tags:: #Frameworks
 	  #+BEGIN_PINNED
 	  <mark style="background-color: orange">I don't know what happens to `item_name` in the example above since it is not a field on Order class.</mark>
 	  #+END_PINNED
+- Interesting errors
+	- `org.postgresql.util.PSQLException: ERROR: FOR UPDATE cannot be applied to the nullable side of an outer join`
+		- Happened when I tried to lock 2 rows in separate tables when one of the sides of the left join didn't have result.
+		  The query in that case was:
+		  ```java
+		  entityManager.createQuery(
+		                          "SELECT b, c from balanceUpdateReservation b left join balanceUpdateConfirm c on c.balanceUpdateReservationEntity.id = b.id WHERE b.reservationCode = :reservationCode")
+		                  .setLockMode(LockModeType.PESSIMISTIC_WRITE).setParameter("reservationCode", reservationCode)
+		    .getResultList()
+		  ```
+		  and, for the `reservationCode` given, there were no `balanceUpdateConfirm`

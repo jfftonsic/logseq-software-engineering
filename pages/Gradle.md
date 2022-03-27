@@ -33,3 +33,4 @@
 		  
 		  with this you have a new source set
 		  ![image.png](../assets/image_1647547912702_0.png)
+- [Gradle Tutorial : Part 3 : Multiple Java Projects](https://rominirani.com/gradle-tutorial-part-3-multiple-java-projects-5b1c4d1fbd8d)
