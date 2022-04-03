@@ -1,0 +1,23 @@
+/* 
+2022-03-19 jtonsic My changes to remove all spacing from the main content and making it take all the size possible. Before this, too much space is wasted.
+*/
+
+:root {
+  --ls-main-content-max-width: unset;
+}
+
+/*.cp__sidebar-main-content {
+    width: 100%;
+    max-width: var(--ls-main-content-max-width);
+    flex: 1;
+}*/
+
+.max-w-7xl {
+    max-width: unset; /* 80rem */
+}
+
+#main-content-container {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  	padding: 0rem;
+}

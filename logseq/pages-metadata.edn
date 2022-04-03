@@ -7,15 +7,21 @@
  {:block/name "62339a8a-f6ad-4ad2-ab1d-769cf782058e",
   :block/created-at 1647652090612,
   :block/updated-at 1647652090612}
+ {:block/name "624227df-e353-4571-9700-1c9a6ed42b36",
+  :block/created-at 1648502947796,
+  :block/updated-at 1648502947796}
  {:block/name "_db transaction isolation levels_",
   :block/created-at 1647652096268,
   :block/updated-at 1647652096268}
  {:block/name "a",
   :block/created-at 1647905261269,
   :block/updated-at 1647905261269}
+ {:block/name "algorithm",
+  :block/created-at 1648427238211,
+  :block/updated-at 1648427244683}
  {:block/name "amqp",
-  :block/created-at 1647971638597,
-  :block/updated-at 1647971638597}
+  :block/created-at 1648425023339,
+  :block/updated-at 1648425023339}
  {:block/name "api",
   :block/created-at 1647652090118,
   :block/updated-at 1647652090118}
@@ -41,36 +47,42 @@
   :block/created-at 1647905261269,
   :block/updated-at 1647905261269}
  {:block/name "caching",
-  :block/created-at 1647971819514,
-  :block/updated-at 1647971819514}
+  :block/created-at 1648425023343,
+  :block/updated-at 1648425023343}
  {:block/name "card",
   :block/created-at 1647905261269,
   :block/updated-at 1647905261269}
  {:block/name "command",
-  :block/created-at 1648141997847,
-  :block/updated-at 1648141997847}
+  :block/created-at 1648425012368,
+  :block/updated-at 1648425012368}
  {:block/name "common table expression",
   :block/created-at 1647652090320,
   :block/updated-at 1647652090320}
  {:block/name "concurrency",
   :block/created-at 1647652090364,
   :block/updated-at 1647652090364}
+ {:block/name "conflict-free replicated data types",
+  :block/created-at 1648427611461,
+  :block/updated-at 1648427612833}
  {:block/name "container-images.html_container-images.buildpacks",
-  :block/created-at 1648141997847,
-  :block/updated-at 1648141997847}
+  :block/created-at 1648425023351,
+  :block/updated-at 1648425023351}
  {:block/name "container-images.html_container-images.dockerfiles",
-  :block/created-at 1648141997847,
-  :block/updated-at 1648141997847}
+  :block/created-at 1648425023348,
+  :block/updated-at 1648425023348}
  {:block/name
   "container-images.html_container-images.efficient-images",
-  :block/created-at 1647971958963,
-  :block/updated-at 1647971958963}
+  :block/created-at 1648425023347,
+  :block/updated-at 1648425023347}
  {:block/name "contents",
   :block/created-at 1647905261269,
-  :block/updated-at 1647905261269}
+  :block/updated-at 1648660506030}
  {:block/name "cte",
   :block/created-at 1647652090315,
   :block/updated-at 1647652090315}
+ {:block/name "data structure",
+  :block/created-at 1648427329885,
+  :block/updated-at 1648427611462}
  {:block/name "database",
   :block/created-at 1647652090761,
   :block/updated-at 1647883031973}
@@ -93,17 +105,20 @@
   :block/created-at 1647652090358,
   :block/updated-at 1647652090358}
  {:block/name "deployment.html_deployment.cloud",
-  :block/created-at 1647972045181,
-  :block/updated-at 1647972045181}
+  :block/created-at 1648425023354,
+  :block/updated-at 1648425023354}
  {:block/name "deployment.html_deployment.installing.nix-services",
-  :block/created-at 1648141997848,
-  :block/updated-at 1648141997848}
+  :block/created-at 1648425023356,
+  :block/updated-at 1648425023356}
  {:block/name "derby",
-  :block/created-at 1647881167012,
-  :block/updated-at 1647881167012}
+  :block/created-at 1648425011575,
+  :block/updated-at 1648425011575}
+ {:block/name "desktop environment",
+  :block/created-at 1648486559104,
+  :block/updated-at 1648486559104}
  {:block/name "diagram generation",
-  :block/created-at 1647967061126,
-  :block/updated-at 1647967067593}
+  :block/created-at 1648425008997,
+  :block/updated-at 1648425008997}
  {:block/name "difference between acid and base",
   :block/created-at 1647652090750,
   :block/updated-at 1647652090750}
@@ -138,8 +153,8 @@
   :block/created-at 1647652091564,
   :block/updated-at 1647652091564}
  {:block/name "firebird",
-  :block/created-at 1647881203987,
-  :block/updated-at 1647881203987}
+  :block/created-at 1648425011572,
+  :block/updated-at 1648425011572}
  {:block/name "framework",
   :block/created-at 1647652091583,
   :block/updated-at 1647652091583}
@@ -153,8 +168,8 @@
   :block/created-at 1647652090283,
   :block/updated-at 1647910326048}
  {:block/name "h2",
-  :block/created-at 1647881203986,
-  :block/updated-at 1647881203986}
+  :block/created-at 1648425011571,
+  :block/updated-at 1648425011571}
  {:block/name "hibernate",
   :block/created-at 1647652091582,
   :block/updated-at 1647992900272}
@@ -165,8 +180,8 @@
   :block/created-at 1647652091796,
   :block/updated-at 1647652091796}
  {:block/name "hsqldb",
-  :block/created-at 1647881203984,
-  :block/updated-at 1647881203984}
+  :block/created-at 1648425011570,
+  :block/updated-at 1648425011570}
  {:block/name "http",
   :block/created-at 1647652091561,
   :block/updated-at 1647652091561}
@@ -177,8 +192,8 @@
   :block/created-at 1647652090254,
   :block/updated-at 1647652090254}
  {:block/name "ignite",
-  :block/created-at 1647881203983,
-  :block/updated-at 1647881203983}
+  :block/created-at 1648425011569,
+  :block/updated-at 1648425011569}
  {:block/name "in-progress",
   :block/created-at 1647905261269,
   :block/updated-at 1647905261269}
@@ -196,13 +211,13 @@
   :block/updated-at 1648141435821}
  {:block/name "java collections",
   :block/created-at 1647652091928,
-  :block/updated-at 1647652091928}
+  :block/updated-at 1648427512977}
  {:block/name "java collections libraries",
   :block/created-at 1647652091908,
   :block/updated-at 1647652091908}
  {:block/name "java module system",
-  :block/created-at 1648141435820,
-  :block/updated-at 1648141881731}
+  :block/created-at 1648425009669,
+  :block/updated-at 1648425009669}
  {:block/name "java persistence api",
   :block/created-at 1647652091958,
   :block/updated-at 1647999317402}
@@ -212,6 +227,9 @@
  {:block/name "jetbrains toolbox on wsl on gui",
   :block/created-at 1647652091847,
   :block/updated-at 1647652091847}
+ {:block/name "jitpack",
+  :block/created-at 1648660018819,
+  :block/updated-at 1648660434933}
  {:block/name "jpa",
   :block/created-at 1647652091960,
   :block/updated-at 1647652091960}
@@ -220,10 +238,10 @@
   :block/updated-at 1647652091990}
  {:block/name "junit",
   :block/created-at 1647652090598,
-  :block/updated-at 1647880404316}
+  :block/updated-at 1648661322788}
  {:block/name "kafka",
-  :block/created-at 1647971637223,
-  :block/updated-at 1647971637223}
+  :block/created-at 1648425023340,
+  :block/updated-at 1648425023340}
  {:block/name "keycloak",
   :block/created-at 1647652092090,
   :block/updated-at 1647652092090}
@@ -236,6 +254,9 @@
  {:block/name "levels of locking in dbms",
   :block/created-at 1647652090421,
   :block/updated-at 1647652090421}
+ {:block/name "linux",
+  :block/created-at 1648486514960,
+  :block/updated-at 1648486514960}
  {:block/name "liquibase",
   :block/created-at 1647652090603,
   :block/updated-at 1647652090603}
@@ -246,8 +267,8 @@
   :block/created-at 1647727349725,
   :block/updated-at 1647727349725}
  {:block/name "logseq-tablerender-plugin",
-  :block/created-at 1647882200966,
-  :block/updated-at 1647882200966}
+  :block/created-at 1648425009957,
+  :block/updated-at 1648425009957}
  {:block/name "logseq.com",
   :block/created-at 1647653146229,
   :block/updated-at 1647653146229}
@@ -278,12 +299,30 @@
  {:block/name "mar 24th, 2022",
   :block/created-at 1648090856382,
   :block/updated-at 1648090856382}
+ {:block/name "mar 25th, 2022",
+  :block/created-at 1648177235814,
+  :block/updated-at 1648177235814}
+ {:block/name "mar 26th, 2022",
+  :block/created-at 1648263620250,
+  :block/updated-at 1648263620250}
+ {:block/name "mar 27th, 2022",
+  :block/created-at 1648425008428,
+  :block/updated-at 1648425008428}
+ {:block/name "mar 28th, 2022",
+  :block/created-at 1648436418392,
+  :block/updated-at 1648436418392}
+ {:block/name "mar 29th, 2022",
+  :block/created-at 1648522804679,
+  :block/updated-at 1648522804679}
+ {:block/name "mar 30th, 2022",
+  :block/created-at 1648653622662,
+  :block/updated-at 1648653622662}
  {:block/name "mariadb",
-  :block/created-at 1647881203982,
-  :block/updated-at 1647881203982}
+  :block/created-at 1648425011568,
+  :block/updated-at 1648425011568}
  {:block/name "markdown",
-  :block/created-at 1647881243431,
-  :block/updated-at 1647969708509}
+  :block/created-at 1648425009968,
+  :block/updated-at 1648425009968}
  {:block/name "mockito",
   :block/created-at 1647652092172,
   :block/updated-at 1648139499163}
@@ -291,8 +330,11 @@
   :block/created-at 1647652090188,
   :block/updated-at 1647652090188}
  {:block/name "mysql",
-  :block/created-at 1647881203981,
-  :block/updated-at 1647881203981}
+  :block/created-at 1648425011566,
+  :block/updated-at 1648425011566}
+ {:block/name "navigableset",
+  :block/created-at 1648579272432,
+  :block/updated-at 1648579392492}
  {:block/name "negotiate",
   :block/created-at 1647652090190,
   :block/updated-at 1647652090190}
@@ -300,8 +342,8 @@
   :block/created-at 1647652090470,
   :block/updated-at 1647652090470}
  {:block/name "nosql",
-  :block/created-at 1647971639595,
-  :block/updated-at 1647971639595}
+  :block/created-at 1648425023330,
+  :block/updated-at 1648425023330}
  {:block/name "now",
   :block/created-at 1647905261269,
   :block/updated-at 1647905261269}
@@ -333,14 +375,17 @@
   :block/created-at 1647652090471,
   :block/updated-at 1647652090471}
  {:block/name "plantuml",
-  :block/created-at 1647967014860,
-  :block/updated-at 1647968226646}
+  :block/created-at 1648425008992,
+  :block/updated-at 1648425008992}
  {:block/name "postgresql",
   :block/created-at 1647652090742,
   :block/updated-at 1647880563112}
  {:block/name "print duplicate rows in a table",
   :block/created-at 1647652090749,
   :block/updated-at 1647652090749}
+ {:block/name "priorityqueue",
+  :block/created-at 1648575013164,
+  :block/updated-at 1648576798931}
  {:block/name "problems",
   :block/created-at 1647652096016,
   :block/updated-at 1647652096016}
@@ -363,8 +408,8 @@
   :block/created-at 1647652095989,
   :block/updated-at 1647652095989}
  {:block/name "relationship between database related components",
-  :block/created-at 1647883031972,
-  :block/updated-at 1647905216741}
+  :block/created-at 1648425010567,
+  :block/updated-at 1648425010567}
  {:block/name "repeatable read",
   :block/created-at 1647652091869,
   :block/updated-at 1647652091869}
@@ -372,8 +417,8 @@
   :block/created-at 1647652091562,
   :block/updated-at 1647652091562}
  {:block/name "sample",
-  :block/created-at 1647727653569,
-  :block/updated-at 1647727653569}
+  :block/created-at 1648425010881,
+  :block/updated-at 1648425010881}
  {:block/name "scram-sha-1",
   :block/created-at 1647652090193,
   :block/updated-at 1647652090193}
@@ -394,7 +439,7 @@
   :block/updated-at 1647652090754}
  {:block/name "software engineering",
   :block/created-at 1647652096303,
-  :block/updated-at 1647967061129}
+  :block/updated-at 1648427329886}
  {:block/name "spring",
   :block/created-at 1647652091580,
   :block/updated-at 1648139213031}
@@ -420,8 +465,8 @@
   :block/created-at 1647652090611,
   :block/updated-at 1647652090611}
  {:block/name "spring integration",
-  :block/created-at 1647971631610,
-  :block/updated-at 1647971631610}
+  :block/created-at 1648425023342,
+  :block/updated-at 1648425023342}
  {:block/name "spring security",
   :block/created-at 1647652096426,
   :block/updated-at 1648141351209}
@@ -435,11 +480,11 @@
   :block/created-at 1647652090596,
   :block/updated-at 1647652090596}
  {:block/name "sql",
-  :block/created-at 1647817862309,
-  :block/updated-at 1647817862309}
+  :block/created-at 1648425012020,
+  :block/updated-at 1648425012020}
  {:block/name "sqlite",
-  :block/created-at 1647881203979,
-  :block/updated-at 1647881203979}
+  :block/created-at 1648425011561,
+  :block/updated-at 1648425011561}
  {:block/name "test fixtures",
   :block/created-at 1647652092053,
   :block/updated-at 1647652092053}
@@ -453,8 +498,8 @@
   :block/created-at 1647652096300,
   :block/updated-at 1647652096300}
  {:block/name "testpropertysource",
-  :block/created-at 1647907481401,
-  :block/updated-at 1647907954295}
+  :block/created-at 1648425011115,
+  :block/updated-at 1648425011115}
  {:block/name "todo",
   :block/created-at 1647905261269,
   :block/updated-at 1647905261269}
@@ -470,6 +515,9 @@
  {:block/name "vapid",
   :block/created-at 1647652090196,
   :block/updated-at 1647652090196}
+ {:block/name "vcxsrv",
+  :block/created-at 1648486733173,
+  :block/updated-at 1648486733173}
  {:block/name "wait",
   :block/created-at 1647905261269,
   :block/updated-at 1647905261269}
@@ -488,6 +536,9 @@
  {:block/name "wsl ubuntu with gui",
   :block/created-at 1647652092020,
   :block/updated-at 1647652092020}
+ {:block/name "xfce",
+  :block/created-at 1648486574385,
+  :block/updated-at 1648499801089}
  {:block/name "yugabytedb",
-  :block/created-at 1647881203977, 
-  :block/updated-at 1647881203977}]
+  :block/created-at 1648425011560, 
+  :block/updated-at 1648425011560}]

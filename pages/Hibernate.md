@@ -74,7 +74,11 @@ tags:: #Frameworks
 	- through properties file
 		- you can put the query on spring boot properties file
 		- or [this post](https://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-creating-database-queries-with-named-queries/) says
-		  > We can declare named queries by adding them into the jpa-named-queries.properties file that is found from the META-INF folder of our classpath.
+		  > We can declare named queries by adding them into the`jpa-named-queries.properties`  file that is found from the `META-INF` folder of our classpath.
+		- #+BEGIN_NOTE
+		  I could not make it work with Spring Boot's `application.yml`.
+		  But with `jpa-named-queries.properties` mentioned before, it worked.
+		  #+END_NOTE
 	- through annotations
 		- one advantage I can see: the query stays as close as possible as the structure of the data
 		- `@NamedQuery`, `@NamedNativeQuery`

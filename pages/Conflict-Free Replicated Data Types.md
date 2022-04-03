@@ -1,0 +1,6 @@
+- G-Counter (Grow-only Counter)
+- PN-Counter (Positive-Negative Counter)
+- G-Set (Grow-only Set)
+- 2P-Set (Two-Phase Set)
+- LWW-Element-Set (Last-Write-Wins-Element-Set)
+- OR-Set (Observed-Remove Set)

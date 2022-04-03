@@ -1,0 +1,1 @@
+- more Stuff from guava: [NewCollectionTypesExplained · google/guava Wiki · GitHub](https://github.com/google/guava/wiki/NewCollectionTypesExplained)

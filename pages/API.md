@@ -1,4 +1,2 @@
 - [[OpenAPI]]
 -
-- [[Java Transaction API]]
--

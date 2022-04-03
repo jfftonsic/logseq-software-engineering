@@ -1,2 +1,3 @@
 - [[Java Collections Libraries]]
 - ![java-collections-cheat-sheet.pdf](../assets/java-collections-cheat-sheet_1647546414084_0.pdf)
+- ![image.png](../assets/image_1648427510768_0.png)

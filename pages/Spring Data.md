@@ -14,7 +14,6 @@ sources:: https://attacomsian.com/blog/spring-data-jpa-query-annotation, https:/
 	  ```
 	-
 - Derived Query Methods in Spring Data JPA
-  collapsed:: true
 	- method name has two main components separated by the first `By` keyword
 		- The introducer clause like `find`, `read`, `query`, `count`, or `get`
 			- which tells Spring Data JPA what you want to do with the method. This clause can contain further expressions, such as `Distinct` to set a distinct flag on the query to be created.
