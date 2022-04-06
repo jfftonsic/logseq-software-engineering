@@ -98,7 +98,6 @@
 			- Graph Incidence List
 		- [[Conflict-Free Replicated Data Types]]
 	- [[Programming Language]]
-	  collapsed:: true
 		- [[Java]]
 			- [[Java Collections]]
 				- [[Java Collections Libraries]]
@@ -106,6 +105,7 @@
 			- [[Java Transaction API]]
 			- [[Java Module System]]
 			- [[JUnit]]
+			- [[AspectJ and Spring AOP]]
 	- [[Security]]
 	  collapsed:: true
 		- [[Authentication]]
@@ -123,6 +123,7 @@
 			- [[Spring Data]]
 			- [[Spring Web]]
 			- [[Spring Integration]]
+			- [[AspectJ and Spring AOP]]
 		- [[Hibernate]]
 	- [[Concurrency]]
 	  collapsed:: true
