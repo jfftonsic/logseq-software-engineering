@@ -10,6 +10,7 @@
 	-
 - [[Logseq plugins used with this knowledge base]]
 - [[Software Engineering]]
+	- [[Tips and Snippets]]
 	- [[Algorithm]]
 	  collapsed:: true
 		- Searching and Sorting Algorithm
