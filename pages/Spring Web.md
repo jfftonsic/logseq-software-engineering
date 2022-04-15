@@ -1,0 +1,2 @@
+- [Guide to Testing Spring Boot Applications With MockMvc](https://rieckpil.de/guide-to-testing-spring-boot-applications-with-mockmvc/)
+- [Spring Boot Auto-configured Spring MVC Tests](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.testing.spring-boot-applications.spring-mvc-tests)

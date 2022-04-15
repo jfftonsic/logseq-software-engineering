@@ -10,7 +10,7 @@
 	  @Transactional(propagation = Propagation.REQUIRED, timeout = TIMEOUT_SECONDS)
 	  @Lock(LockModeType.PESSIMISTIC_WRITE)
 	  ```
-- Multiple spring and testing things
+- Multiple spring and testing annotations
   collapsed:: true
 	- ```java
 	  // activating profiles for the execution of the test class
@@ -215,6 +215,7 @@
 		- why?
 			- because `new BigDecimal("1.00").equals(new BigDecimal("1.0"))` is false.
 - Test classes related
+  collapsed:: true
 	- Pure JUnit + Mockito
 		- ```java
 		  @ExtendWith(MockitoExtension.class)
@@ -250,3 +251,63 @@
 		  }
 		  ```
 	- Setting private/final field: `ReflectionTestUtils.setField(balanceUpdateUndoEntity, "id", UUID1);`
+- #[[Spring Security]]
+  collapsed:: true
+	- A Service  that requires the user to be authenticated in order to access it.
+		- id:: 6259c1fd-1cdf-4b96-a334-4fcbd0ed0342
+		  ```java
+		  public class HelloMessageService implements MessageService {
+		  
+		  	@PreAuthorize("authenticated")
+		  	public String getMessage() {
+		  		Authentication authentication = SecurityContextHolder.getContext()
+		  			.getAuthentication();
+		  		return "Hello " + authentication;
+		  	}
+		  }
+		  ```
+- #Testing #[[Spring Security]]
+  collapsed:: true
+	- sources:: [Spring Documentation - Testing Method Security](https://docs.spring.io/spring-security/reference/servlet/test/method.html)
+	- given
+	  collapsed:: true
+		- {{embed ((6259c1fd-1cdf-4b96-a334-4fcbd0ed0342))}}
+	- ```java
+	  // will pass
+	  @Test(expected = AuthenticationCredentialsNotFoundException.class)
+	  public void getMessageUnauthenticated() {
+	  	messageService.getMessage();
+	  }
+	  
+	  //How could we most easily run the test as a specific user?
+	  // The following test will be run as a user with the 
+	  //username "user", the password "password", and the roles 
+	  //"ROLE_USER"
+	  @Test
+	  @WithMockUser
+	  public void getMessageWithMockUser() {
+	  String message = messageService.getMessage();
+	  ...
+	  }
+	  
+	  //"roles" below prepends "ROLE_" to the value informed
+	  @WithMockUser(username="admin",roles={"USER","ADMIN"})
+	  //"authorities" below does not
+	  @WithMockUser(username = "admin", authorities = { "ADMIN", "USER" })
+	  // it can be put at class level
+	  
+	  //Want anonymous user?
+	  @WithAnonymousUser
+	  
+	  //Assuming we have a UserDetailsService exposed as a bean, 
+	  //the following test will be invoked with an Authentication
+	  //of type UsernamePasswordAuthenticationToken and a principal 
+	  //that is returned from the UserDetailsService with the 
+	  //username of "user".
+	  @WithUserDetails
+	  // Want to customize the username used to lookup the user 
+	  //from our UserDetailsService? What about the service bean?
+	  @WithUserDetails(value="customUsername", 
+	  	userDetailsServiceBeanName="myUserDetailsService")
+	  
+	  ```
