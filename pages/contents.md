@@ -127,8 +127,8 @@
 			- [[AspectJ and Spring AOP]]
 		- [[Hibernate]]
 	- [[Concurrency]]
-	  collapsed:: true
 		- [[Lock]]
+		- [[Consistency]]
 		- Concurrency in databases
 		  id:: 624227df-e353-4571-9700-1c9a6ed42b36
 			- [[DB Transactional Locks]]
@@ -163,4 +163,3 @@
 	- [[Windows]]
 		- [[WSL]]
 	- [[Diagram Generation]]
-- Frameworks

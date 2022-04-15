@@ -12,5 +12,5 @@
 - [[Build Tools]]
 - [[Windows]]
 - [[Diagram Generation]]
--
+- [[Chart]]
 -

@@ -1,0 +1,3 @@
+- Could potentially try:
+	- [KVision Charts](https://kvision.gitbook.io/kvision-guide/3.-optional-ui-functionality-via-modules/charts)
+		- Kvision is a Kotlin/JS framework that seems to have some similar elements to Vaadin.
