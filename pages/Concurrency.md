@@ -3,4 +3,9 @@
 - [[Transaction]]
 - [[Entity Manager]]
 - [[Persistence Context]]
+- [[Consistency]]
+-
+- https://www.geeksforgeeks.org/concurrency-control-in-dbms
+- https://www.cs.princeton.edu/courses/archive/spr18/cos518/docs/L3-strong-consistency.pdf
+-
 -
