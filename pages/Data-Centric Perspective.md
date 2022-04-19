@@ -1,1 +1,3 @@
-- The system is aware of multiple units of execution acting on given data and it synchronizes data access operations from all of them to guarantee correct result.
+- The system is aware of multiple [[units of execution]] acting on given data and it synchronizes data access operations from all of them to guarantee correct result.
+- See also
+	- [[Client-Centric Perspective]]

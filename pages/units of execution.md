@@ -1,0 +1,1 @@
+- an actor which operates on a memory location / object / variable

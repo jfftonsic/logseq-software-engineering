@@ -1,2 +1,6 @@
 - [[DB Transactional Locks]]
-  title:: Lock
+-
+- in distributed applications
+	- why use?
+		- [[efficiency]]: avoid unnecessarily doing the same work twice (e.g. some expensive computation)
+		- [[correctness]]: avoid conflicting concurrent work on shared data

@@ -99,6 +99,7 @@
 			- Graph Incidence List
 		- [[Conflict-Free Replicated Data Types]]
 	- [[Programming Language]]
+	  collapsed:: true
 		- [[Java]]
 			- [[Java Collections]]
 				- [[Java Collections Libraries]]
@@ -107,15 +108,6 @@
 			- [[Java Module System]]
 			- [[JUnit]]
 			- [[AspectJ and Spring AOP]]
-	- [[Security]]
-	  collapsed:: true
-		- [[Authentication]]
-			- [[Authentication Scheme]]
-			- [[Hypertext Transfer Protocol (HTTP/1.1): Authentication]]
-			- tools
-				- [[Keycloak]]
-		- in frameworks
-			- [[Spring Security]]
 	- [[Framework]]
 	  collapsed:: true
 		- [[Spring]]
@@ -126,7 +118,23 @@
 			- [[Spring Integration]]
 			- [[AspectJ and Spring AOP]]
 		- [[Hibernate]]
+	- [[Infrastructure]]
+		- [[Docker]]
+		- [[AWS]]
+		- [[Ansible]]
+		- [[Puppet]]
+	- [[Security]]
+	  collapsed:: true
+		- [[Authentication]]
+			- [[Authentication Scheme]]
+			- [[Hypertext Transfer Protocol (HTTP/1.1): Authentication]]
+			- tools
+				- [[Keycloak]]
+		- in frameworks
+			- [[Spring Security]]
+	- [[Distributed Computing]]
 	- [[Concurrency]]
+	  collapsed:: true
 		- [[Lock]]
 		- [[Consistency]]
 		- Concurrency in databases
@@ -143,6 +151,7 @@
 	- [[Database]]
 	  collapsed:: true
 		- Specific databases
+		  collapsed:: true
 			- Open-source databases
 				- [[Derby]]
 				- [[Firebird]]
@@ -157,9 +166,25 @@
 		- {{embed ((624227df-e353-4571-9700-1c9a6ed42b36))}}
 	- [[Problems]]
 	- [[Testing]]
-	- [[Build Tools]]
-		- [[gradle]]
-		- [[JitPack]] : ((62448ec2-3c79-49db-b279-cb949a1fc694))
+	- Tools
+		- [[Build Tools]]
+		  collapsed:: true
+			- [[gradle]]
+			- [[JitPack]] : ((62448ec2-3c79-49db-b279-cb949a1fc694))
+		- Distributed Coordination
+			- [[Apache ZooKeeper]]
 	- [[Windows]]
 		- [[WSL]]
 	- [[Diagram Generation]]
+	- Characteristics / Properties of Systems
+		- [[reliability]]
+		- [[scalability]]
+		- [[fault-tolerance]]
+		- [[correctness]]
+		- [[efficiency]]
+	- State of Systems
+		- [[Availability]]
+		- [[Partitioning]]
+	- General Definitions
+		- [[consensus number]]
+		- [[consensus problem]]

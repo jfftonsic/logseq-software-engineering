@@ -1,0 +1,4 @@
+- The system only cares about data access operations from the concerned process operating on the given data and it assumes that other [[units of execution]] either don’t exist or don’t have any significant impact.
+- See also
+	- [[Data-Centric Perspective]]
+-

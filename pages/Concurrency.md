@@ -1,8 +1,17 @@
-- [[Lock]]
+- [[concurrent data object]] - ((625b5711-4fbb-4514-b49e-ce4648d1a5f6))
+	- [[wait-free implementation of a concurrent data object]]
+- concurreny constructs
+	- [[Lock]]
+	- [[Fencing Token]] - ((625dadd2-8136-4b38-95e4-84b9e6f225e1))
+-
 - [[DB Transactional Locks]]
+-
 - [[Transaction]]
+-
 - [[Entity Manager]]
+-
 - [[Persistence Context]]
+-
 - [[Consistency]]
 -
 - https://www.geeksforgeeks.org/concurrency-control-in-dbms

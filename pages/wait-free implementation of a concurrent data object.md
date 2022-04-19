@@ -1,0 +1,5 @@
+- guarantees
+	- that any process can complete any operation in a finite number of steps, regardless of the execution speeds on the other processes
+- provides
+	- [[fault-tolerance]]
+		- In this case, no process can be prevented from completing an operation by undetected halting failures of other processes, or by arbitrary variations in their speed.

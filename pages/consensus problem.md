@@ -1,0 +1,3 @@
+- Short description
+	- the problem in reaching a general agreement on a decision made by the majority of those involved.
+- a fundamental problem in [[Distributed Computing]] and multi-agent systems is to achieve overall system [[reliability]] in the presence of a number of faulty processes.
