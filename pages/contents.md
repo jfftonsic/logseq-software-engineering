@@ -98,6 +98,8 @@
 			- Graph Incidence Matrix
 			- Graph Incidence List
 		- [[Conflict-Free Replicated Data Types]]
+	- Architectural approach
+		- [[Microservice]]
 	- [[Programming Language]]
 	  collapsed:: true
 		- [[Java]]
@@ -119,6 +121,7 @@
 			- [[AspectJ and Spring AOP]]
 		- [[Hibernate]]
 	- [[Infrastructure]]
+	  collapsed:: true
 		- [[Docker]]
 		- [[AWS]]
 		- [[Ansible]]
@@ -182,6 +185,7 @@
 		- [[fault-tolerance]]
 		- [[correctness]]
 		- [[efficiency]]
+		- [[latency]]
 	- State of Systems
 		- [[Availability]]
 		- [[Partitioning]]
