@@ -1,0 +1,6 @@
+- New features
+	- switch expressions (preview)
+	- Experimental GC
+		- shenandoah
+			- a low-pause-time GC
+	- improvements on G1 GC

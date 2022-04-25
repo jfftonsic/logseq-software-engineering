@@ -134,15 +134,25 @@
 			- Messaging
 			- Remote Procedure Invocation
 	- [[Programming Language]]
-	  collapsed:: true
 		- [[Java]]
 			- [[Java Collections]]
+			  collapsed:: true
 				- [[Java Collections Libraries]]
 			- [[Java Persistence API]]
 			- [[Java Transaction API]]
 			- [[Java Module System]]
 			- [[JUnit]]
 			- [[AspectJ and Spring AOP]]
+			- Java versions
+				- [[Java 10]]
+				- [[Java 11]]
+				- [[Java 12]]
+				- [[Java 13]]
+				- [[Java 14]]
+			- Performance and stress related
+				- Tools
+					- [[JMH]]
+					- [[Java Concurrency Stress]]
 	- [[Framework]]
 	  collapsed:: true
 		- [[Spring]]
@@ -154,6 +164,7 @@
 			- [[AspectJ and Spring AOP]]
 		- [[Hibernate]]
 	- [[Infrastructure]]
+	  collapsed:: true
 		- [[Docker]]
 		- [[AWS]]
 		- [[Ansible]]
@@ -241,7 +252,7 @@
 				- [[SQLite]]
 				- [[YugabyteDB]]
 		- {{embed ((624227df-e353-4571-9700-1c9a6ed42b36))}}
-	- [[Problems]]
+	- [[Problems / Troubleshoot]]
 	- [[Testing]]
 	- Tools
 		- [[Build Tools]]
@@ -253,6 +264,7 @@
 	- [[Windows]]
 		- [[WSL]]
 	- [[Diagram Generation]]
+	- [[Chart]]
 	- Characteristics / Properties of Systems
 		- [[reliability]]
 		- [[scalability]]

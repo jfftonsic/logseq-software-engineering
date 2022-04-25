@@ -2,7 +2,10 @@ alias:: JPA
 sources:: https://www.baeldung.com/java-jpa-transaction-locks
 
 - Each JPA implementation provides some type of [[object-relation mapping]] layer
+- [[Entity Manager]]
+- [[Persistence Context]]
 - JPA Lock Types
+  collapsed:: true
 	- Pessimistic Locking
 		- **When the transaction access an entity, it will be locked immediately** throwing a `LockTimeoutException` if it fails. If you want to avoid that and specify a lock timeout, then:
 		  ```java

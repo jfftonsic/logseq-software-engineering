@@ -1,4 +1,10 @@
-[{:block/name "62326304-d575-4c2d-bd1c-1184412cb068",
+[{:block/name "2 phase-commit",
+  :block/created-at 1650392472655,
+  :block/updated-at 1650392483631}
+ {:block/name "2-phase commit",
+  :block/created-at 1650308141366,
+  :block/updated-at 1650390593754}
+ {:block/name "62326304-d575-4c2d-bd1c-1184412cb068",
   :block/created-at 1647652096438,
   :block/updated-at 1647652096438}
  {:block/name "62339a8a-f6ad-4ad2-ab1d-769cf782058e",
@@ -7,6 +13,12 @@
  {:block/name "624227df-e353-4571-9700-1c9a6ed42b36",
   :block/created-at 1648502947796,
   :block/updated-at 1648502947796}
+ {:block/name "6259c1fd-1cdf-4b96-a334-4fcbd0ed0342",
+  :block/created-at 1650049687261,
+  :block/updated-at 1650049687261}
+ {:block/name "6265657b-3e7a-497e-b391-523629a99ecf",
+  :block/created-at 1650812392142,
+  :block/updated-at 1650812392142}
  {:block/name "[auto-configured spring mvc tests]https_",
   :block/created-at 1647563433230,
   :block/updated-at 1647563433230}
@@ -44,42 +56,87 @@
  {:block/name "a",
   :block/created-at 1647905261269,
   :block/updated-at 1647905261269}
+ {:block/name "acid",
+  :block/created-at 1650307323156,
+  :block/updated-at 1650307323156}
  {:block/name "algorithm",
   :block/created-at 1648427238211,
   :block/updated-at 1648427244683}
  {:block/name "amqp",
   :block/created-at 1648425023339,
   :block/updated-at 1648425023339}
+ {:block/name "ansible",
+  :block/created-at 1650301814690,
+  :block/updated-at 1650301814690}
+ {:block/name "apache zookeeper",
+  :block/created-at 1650152158668,
+  :block/updated-at 1650153197095}
  {:block/name "api",
   :block/created-at 1647652090118,
   :block/updated-at 1647652090118}
- {:block/name "apr 10th, 2022",
-  :block/created-at 1649608951977,
-  :block/updated-at 1649608951977}
- {:block/name "apr 1st, 2022",
-  :block/created-at 1648843137710,
-  :block/updated-at 1648843137710}
- {:block/name "apr 7th, 2022",
-  :block/created-at 1649352256472,
-  :block/updated-at 1649352256472}
+ {:block/name "api composition",
+  :block/created-at 1650392500018,
+  :block/updated-at 1650392510505}
+ {:block/name "apr 16th, 2022",
+  :block/created-at 1650137688739,
+  :block/updated-at 1650137688739}
+ {:block/name "apr 17th, 2022",
+  :block/created-at 1650207569331,
+  :block/updated-at 1650207569331}
+ {:block/name "apr 18th, 2022",
+  :block/created-at 1650292594034,
+  :block/updated-at 1650292594034}
+ {:block/name "apr 19th, 2022",
+  :block/created-at 1650378356867,
+  :block/updated-at 1650378356867}
+ {:block/name "apr 20th, 2022",
+  :block/created-at 1650464411329,
+  :block/updated-at 1650464411329}
+ {:block/name "apr 21st, 2022",
+  :block/created-at 1650582798345,
+  :block/updated-at 1650582798345}
+ {:block/name "apr 22nd, 2022",
+  :block/created-at 1650640492785,
+  :block/updated-at 1650640492785}
+ {:block/name "apr 23rd, 2022",
+  :block/created-at 1650724317222,
+  :block/updated-at 1650724317222}
+ {:block/name "apr 24th, 2022",
+  :block/created-at 1650811792437,
+  :block/updated-at 1650811792437}
  {:block/name "aspectj and spring aop",
   :block/created-at 1649352256800,
   :block/updated-at 1649354330138}
+ {:block/name "atomicity",
+  :block/created-at 1650051775191,
+  :block/updated-at 1650051775191}
  {:block/name "authentication",
   :block/created-at 1647652090257,
   :block/updated-at 1647652090257}
  {:block/name "authentication scheme",
   :block/created-at 1647652090198,
   :block/updated-at 1647652090198}
+ {:block/name "availability",
+  :block/created-at 1650307125047,
+  :block/updated-at 1650307125047}
+ {:block/name "aws",
+  :block/created-at 1650301550184,
+  :block/updated-at 1650301673478}
  {:block/name "b",
   :block/created-at 1647905261269,
   :block/updated-at 1647905261269}
+ {:block/name "base",
+  :block/created-at 1650307706378,
+  :block/updated-at 1650307706378}
  {:block/name "basic",
   :block/created-at 1647652090181,
   :block/updated-at 1647652090181}
  {:block/name "bearer",
   :block/created-at 1647652090182,
   :block/updated-at 1647652090182}
+ {:block/name "bounded staleness consistency",
+  :block/created-at 1650141075962,
+  :block/updated-at 1650141075962}
  {:block/name "build tools",
   :block/created-at 1647652090284,
   :block/updated-at 1647652090284}
@@ -89,21 +146,60 @@
  {:block/name "caching",
   :block/created-at 1648425023343,
   :block/updated-at 1648425023343}
+ {:block/name "cap theorem",
+  :block/created-at 1650052470221,
+  :block/updated-at 1650308141367}
  {:block/name "card",
   :block/created-at 1647905261269,
   :block/updated-at 1647905261269}
+ {:block/name "causal consistency",
+  :block/created-at 1650141060689,
+  :block/updated-at 1650141060689}
+ {:block/name "chart",
+  :block/created-at 1650049004471,
+  :block/updated-at 1650049004471}
+ {:block/name "client-centric perspective",
+  :block/created-at 1650151638120,
+  :block/updated-at 1650151784887}
  {:block/name "command",
   :block/created-at 1648425012368,
   :block/updated-at 1648425012368}
+ {:block/name "command query responsibility segregation",
+  :block/created-at 1650392507151,
+  :block/updated-at 1650392520562}
  {:block/name "common table expression",
   :block/created-at 1647652090320,
   :block/updated-at 1647652090320}
  {:block/name "concurrency",
   :block/created-at 1647652090364,
-  :block/updated-at 1647652090364}
+  :block/updated-at 1650815518598}
+ {:block/name "concurrent data object",
+  :block/created-at 1650153232733,
+  :block/updated-at 1650153251428}
  {:block/name "conflict-free replicated data types",
   :block/created-at 1648427611461,
   :block/updated-at 1648427612833}
+ {:block/name "consensus number",
+  :block/created-at 1650153446604,
+  :block/updated-at 1650153666883}
+ {:block/name "consensus problem",
+  :block/created-at 1650153454013,
+  :block/updated-at 1650153624429}
+ {:block/name "consistency",
+  :block/created-at 1650049004781,
+  :block/updated-at 1650143615222}
+ {:block/name "consistent prefix reads",
+  :block/created-at 1650049004779,
+  :block/updated-at 1650051929041}
+ {:block/name "container",
+  :block/created-at 1650812774742,
+  :block/updated-at 1650813082234}
+ {:block/name "container engine",
+  :block/created-at 1650813468713,
+  :block/updated-at 1650813604431}
+ {:block/name "container runtime",
+  :block/created-at 1650813145131,
+  :block/updated-at 1650813468714}
  {:block/name "container-images.html_container-images.buildpacks",
   :block/created-at 1648425023351,
   :block/updated-at 1648425023351}
@@ -116,13 +212,25 @@
   :block/updated-at 1648425023347}
  {:block/name "contents",
   :block/created-at 1647905261269,
-  :block/updated-at 1648660506030}
+  :block/updated-at 1650815101326}
+ {:block/name "continuous deployment",
+  :block/created-at 1650392053579,
+  :block/updated-at 1650392057621}
+ {:block/name "correctness",
+  :block/created-at 1650306421035,
+  :block/updated-at 1650306421035}
+ {:block/name "cqrs",
+  :block/created-at 1650392520558,
+  :block/updated-at 1650392520558}
  {:block/name "cte",
   :block/created-at 1647652090315,
   :block/updated-at 1647652090315}
  {:block/name "data structure",
   :block/created-at 1648427329885,
   :block/updated-at 1648427611462}
+ {:block/name "data-centric perspective",
+  :block/created-at 1650051902087,
+  :block/updated-at 1650151729094}
  {:block/name "database",
   :block/created-at 1647652090761,
   :block/updated-at 1647883031973}
@@ -132,9 +240,6 @@
  {:block/name "database normalization",
   :block/created-at 1647652090709,
   :block/updated-at 1647652090709}
- {:block/name "databases",
-  :block/created-at 1647534368400,
-  :block/updated-at 1647534368400}
  {:block/name "datajpatest",
   :block/created-at 1647652090616,
   :block/updated-at 1647817881390}
@@ -177,24 +282,45 @@
  {:block/name "dirty read",
   :block/created-at 1647652090469,
   :block/updated-at 1647652090469}
+ {:block/name "distributed computing",
+  :block/created-at 1650153567101,
+  :block/updated-at 1650306989329}
+ {:block/name "distributed transactions",
+  :block/created-at 1650392478398,
+  :block/updated-at 1650392487110}
+ {:block/name "docker",
+  :block/created-at 1650300593431,
+  :block/updated-at 1650813337001}
  {:block/name "doing",
   :block/created-at 1647905261269,
   :block/updated-at 1647905261269}
  {:block/name "done",
   :block/created-at 1647905261269,
   :block/updated-at 1647905261269}
+ {:block/name "durability",
+  :block/created-at 1650051781663,
+  :block/updated-at 1650051781663}
+ {:block/name "efficiency",
+  :block/created-at 1650306428600,
+  :block/updated-at 1650306428600}
  {:block/name "entity manager",
   :block/created-at 1647652090361,
   :block/updated-at 1647652090361}
  {:block/name "extended-scoped persistence context",
   :block/created-at 1647652091538,
   :block/updated-at 1647652091538}
+ {:block/name "fault-tolerance",
+  :block/created-at 1650153363458,
+  :block/updated-at 1650153363458}
  {:block/name "favorites",
   :block/created-at 1647905261269,
   :block/updated-at 1647905261269}
  {:block/name "feign",
   :block/created-at 1647652091564,
   :block/updated-at 1647652091564}
+ {:block/name "fencing token",
+  :block/created-at 1650306505260,
+  :block/updated-at 1650306830407}
  {:block/name "firebird",
   :block/created-at 1648425011572,
   :block/updated-at 1648425011572}
@@ -204,15 +330,24 @@
  {:block/name "frameworks",
   :block/created-at 1647652091598,
   :block/updated-at 1647652091598}
+ {:block/name "functional decomposition",
+  :block/created-at 1650391938250,
+  :block/updated-at 1650391943511}
  {:block/name "fuzzy bash history search tool",
   :block/created-at 1647652091610,
   :block/updated-at 1647652091610}
+ {:block/name "global ordering",
+  :block/created-at 1650051253648,
+  :block/updated-at 1650066786638}
  {:block/name "gradle",
   :block/created-at 1647652090283,
   :block/updated-at 1647910326048}
  {:block/name "h2",
   :block/created-at 1648425011571,
   :block/updated-at 1648425011571}
+ {:block/name "happens-before",
+  :block/created-at 1650066543378,
+  :block/updated-at 1650484747041}
  {:block/name "hibernate",
   :block/created-at 1647652091582,
   :block/updated-at 1647992900272}
@@ -243,27 +378,57 @@
  {:block/name "indexing",
   :block/created-at 1647652090745,
   :block/updated-at 1647652090745}
+ {:block/name "infrastructure",
+  :block/created-at 1650300507691,
+  :block/updated-at 1650301908851}
+ {:block/name "infrastructuretech",
+  :block/created-at 1650301030734,
+  :block/updated-at 1650301030734}
  {:block/name "intellij on wsl on gui",
   :block/created-at 1647652091848,
   :block/updated-at 1647652091848}
+ {:block/name "isolation",
+  :block/created-at 1650051780319,
+  :block/updated-at 1650051780319}
  {:block/name "isolation level",
   :block/created-at 1647652090753,
   :block/updated-at 1647652090753}
  {:block/name "java",
   :block/created-at 1647652091507,
-  :block/updated-at 1648141435821}
+  :block/updated-at 1650813865378}
+ {:block/name "java 10",
+  :block/created-at 1650813848872,
+  :block/updated-at 1650813893862}
+ {:block/name "java 11",
+  :block/created-at 1650813855208,
+  :block/updated-at 1650814223119}
+ {:block/name "java 12",
+  :block/created-at 1650813857891,
+  :block/updated-at 1650814271897}
+ {:block/name "java 13",
+  :block/created-at 1650813860544,
+  :block/updated-at 1650814340142}
+ {:block/name "java 14",
+  :block/created-at 1650813862497,
+  :block/updated-at 1650813862497}
+ {:block/name "java 15",
+  :block/created-at 1650813865378,
+  :block/updated-at 1650813865378}
  {:block/name "java collections",
   :block/created-at 1647652091928,
   :block/updated-at 1648427512977}
  {:block/name "java collections libraries",
   :block/created-at 1647652091908,
   :block/updated-at 1647652091908}
+ {:block/name "java concurrency stress",
+  :block/created-at 1650815101324,
+  :block/updated-at 1650815134810}
  {:block/name "java module system",
   :block/created-at 1648425009669,
   :block/updated-at 1648425009669}
  {:block/name "java persistence api",
   :block/created-at 1647652091958,
-  :block/updated-at 1647999317402}
+  :block/updated-at 1650814861605}
  {:block/name "java transaction api",
   :block/created-at 1647652090117,
   :block/updated-at 1647652090117}
@@ -273,6 +438,9 @@
  {:block/name "jitpack",
   :block/created-at 1648660018819,
   :block/updated-at 1648660434933}
+ {:block/name "jmh",
+  :block/created-at 1650815033468,
+  :block/updated-at 1650815209210}
  {:block/name "jpa",
   :block/created-at 1647652091960,
   :block/updated-at 1647652091960}
@@ -291,12 +459,18 @@
  {:block/name "kotlin",
   :block/created-at 1647652091624,
   :block/updated-at 1647652091624}
+ {:block/name "latency",
+  :block/created-at 1650390992652,
+  :block/updated-at 1650390992652}
  {:block/name "later",
   :block/created-at 1647905261269,
   :block/updated-at 1647905261269}
  {:block/name "levels of locking in dbms",
   :block/created-at 1647652090421,
   :block/updated-at 1647652090421}
+ {:block/name "linearizability",
+  :block/created-at 1650141137697,
+  :block/updated-at 1650141137697}
  {:block/name "linux",
   :block/created-at 1648486514960,
   :block/updated-at 1648486514960}
@@ -305,7 +479,7 @@
   :block/updated-at 1647652090603}
  {:block/name "lock",
   :block/created-at 1647652090354,
-  :block/updated-at 1647652090354}
+  :block/updated-at 1650306455096}
  {:block/name "logseq plugins used with this knowledge base",
   :block/created-at 1647727349725,
   :block/updated-at 1647727349725}
@@ -324,24 +498,24 @@
  {:block/name "mar 18th, 2022",
   :block/created-at 1647652092168,
   :block/updated-at 1647652092168}
- {:block/name "mar 19th, 2022",
-  :block/created-at 1647727349046,
-  :block/updated-at 1647727349046}
- {:block/name "mar 27th, 2022",
-  :block/created-at 1648425008428,
-  :block/updated-at 1648425008428}
- {:block/name "mar 31st, 2022",
-  :block/created-at 1649352256001,
-  :block/updated-at 1649352256001}
  {:block/name "mariadb",
   :block/created-at 1648425011568,
   :block/updated-at 1648425011568}
  {:block/name "markdown",
   :block/created-at 1648425009968,
   :block/updated-at 1648425009968}
+ {:block/name "microservice",
+  :block/created-at 1650391546563,
+  :block/updated-at 1650392593590}
  {:block/name "mockito",
   :block/created-at 1647652092172,
   :block/updated-at 1648139499163}
+ {:block/name "monotonic read",
+  :block/created-at 1650137824984,
+  :block/updated-at 1650138718825}
+ {:block/name "monotonic write",
+  :block/created-at 1650141019090,
+  :block/updated-at 1650141019090}
  {:block/name "mutual",
   :block/created-at 1647652090188,
   :block/updated-at 1647652090188}
@@ -354,6 +528,9 @@
  {:block/name "negotiate",
   :block/created-at 1647652090190,
   :block/updated-at 1647652090190}
+ {:block/name "network partition",
+  :block/created-at 1650390952398,
+  :block/updated-at 1650390952398}
  {:block/name "non repeatable read",
   :block/created-at 1647652090470,
   :block/updated-at 1647652090470}
@@ -375,12 +552,21 @@
  {:block/name "openapi",
   :block/created-at 1647652090115,
   :block/updated-at 1647652090115}
+ {:block/name "optimistic locking",
+  :block/created-at 1650308062484,
+  :block/updated-at 1650308062484}
  {:block/name "optimisticlockexception",
   :block/created-at 1647652091956,
   :block/updated-at 1647652091956}
  {:block/name "orm",
   :block/created-at 1647652096904,
   :block/updated-at 1647652096904}
+ {:block/name "pacelc theorem",
+  :block/created-at 1650307082960,
+  :block/updated-at 1650391364696}
+ {:block/name "partitioning",
+  :block/created-at 1650307125044,
+  :block/updated-at 1650390952402}
  {:block/name "persistence context",
   :block/created-at 1647652090362,
   :block/updated-at 1647652090362}
@@ -402,18 +588,27 @@
  {:block/name "priorityqueue",
   :block/created-at 1648575013164,
   :block/updated-at 1648576798931}
- {:block/name "problems",
+ {:block/name "problems / troubleshoot",
   :block/created-at 1647652096016,
-  :block/updated-at 1647652096016}
+  :block/updated-at 1650812369454}
  {:block/name "programming language",
   :block/created-at 1647652096028,
   :block/updated-at 1647652096028}
+ {:block/name "puppet",
+  :block/created-at 1650301821574,
+  :block/updated-at 1650301821574}
  {:block/name "read committed",
   :block/created-at 1647652091866,
   :block/updated-at 1647652091866}
  {:block/name "read uncommitted",
   :block/created-at 1647652091865,
   :block/updated-at 1647652091865}
+ {:block/name "read-my-write",
+  :block/created-at 1650137903491,
+  :block/updated-at 1650137903491}
+ {:block/name "read-your-own-write",
+  :block/created-at 1650137813066,
+  :block/updated-at 1650138234491}
  {:block/name "readme",
   :block/created-at 1647653146234,
   :block/updated-at 1647653146234}
@@ -426,15 +621,33 @@
  {:block/name "relationship between database related components",
   :block/created-at 1648425010567,
   :block/updated-at 1648425010567}
+ {:block/name "reliability",
+  :block/created-at 1650151876829,
+  :block/updated-at 1650151915173}
+ {:block/name "reliable",
+  :block/created-at 1650151915169,
+  :block/updated-at 1650151915169}
  {:block/name "repeatable read",
   :block/created-at 1647652091869,
   :block/updated-at 1647652091869}
  {:block/name "rest",
   :block/created-at 1647652091562,
   :block/updated-at 1647652091562}
+ {:block/name "ryow",
+  :block/created-at 1650137894331,
+  :block/updated-at 1650137894331}
+ {:block/name "saga",
+  :block/created-at 1650391991971,
+  :block/updated-at 1650391997351}
  {:block/name "sample",
   :block/created-at 1648425010881,
   :block/updated-at 1648425010881}
+ {:block/name "scalability",
+  :block/created-at 1650151882987,
+  :block/updated-at 1650151922173}
+ {:block/name "scalable",
+  :block/created-at 1650151922171,
+  :block/updated-at 1650151922171}
  {:block/name "scram-sha-1",
   :block/created-at 1647652090193,
   :block/updated-at 1647652090193}
@@ -444,9 +657,21 @@
  {:block/name "security",
   :block/created-at 1647652096074,
   :block/updated-at 1647652096074}
+ {:block/name "sequential consistency",
+  :block/created-at 1650141112638,
+  :block/updated-at 1650141112638}
  {:block/name "serializable",
   :block/created-at 1647652091870,
   :block/updated-at 1647652091870}
+ {:block/name "session",
+  :block/created-at 1650137739057,
+  :block/updated-at 1650137786143}
+ {:block/name "session causality",
+  :block/created-at 1650140274131,
+  :block/updated-at 1650140274131}
+ {:block/name "session guarantees",
+  :block/created-at 1650137725212,
+  :block/updated-at 1650141033109}
  {:block/name "snapshot",
   :block/created-at 1647652091871,
   :block/updated-at 1647652091871}
@@ -461,7 +686,7 @@
   :block/updated-at 1649357722716}
  {:block/name "spring boot",
   :block/created-at 1647652092088,
-  :block/updated-at 1647652092088}
+  :block/updated-at 1650050627944}
  {:block/name "spring boot + liquibase",
   :block/created-at 1647652090605,
   :block/updated-at 1647652090605}
@@ -494,7 +719,7 @@
   :block/updated-at 1648141952364}
  {:block/name "spring web",
   :block/created-at 1647653230429,
-  :block/updated-at 1647653230429}
+  :block/updated-at 1650050584041}
  {:block/name "springboottest",
   :block/created-at 1647652090596,
   :block/updated-at 1647652090596}
@@ -504,6 +729,12 @@
  {:block/name "sqlite",
   :block/created-at 1648425011561,
   :block/updated-at 1648425011561}
+ {:block/name "strict consistency",
+  :block/created-at 1650141140385,
+  :block/updated-at 1650141140385}
+ {:block/name "strong consistency",
+  :block/created-at 1650141102893,
+  :block/updated-at 1650141102893}
  {:block/name "test fixtures",
   :block/created-at 1647652092053,
   :block/updated-at 1647652092053}
@@ -519,9 +750,12 @@
  {:block/name "testpropertysource",
   :block/created-at 1648425011115,
   :block/updated-at 1648425011115}
+ {:block/name "threadlocal",
+  :block/created-at 1650647362773,
+  :block/updated-at 1650647507467}
  {:block/name "tips and snippets",
   :block/created-at 1649608952809,
-  :block/updated-at 1649608952809}
+  :block/updated-at 1650050227705}
  {:block/name "todo",
   :block/created-at 1647905261269,
   :block/updated-at 1647905261269}
@@ -534,6 +768,9 @@
  {:block/name "types of keys in relational model",
   :block/created-at 1647652090747,
   :block/updated-at 1647652090747}
+ {:block/name "units of execution",
+  :block/created-at 1650151729094,
+  :block/updated-at 1650151749887}
  {:block/name "vapid",
   :block/created-at 1647652090196,
   :block/updated-at 1647652090196}
@@ -543,6 +780,9 @@
  {:block/name "wait",
   :block/created-at 1647905261269,
   :block/updated-at 1647905261269}
+ {:block/name "wait-free implementation of a concurrent data object",
+  :block/created-at 1650153313210,
+  :block/updated-at 1650153381194}
  {:block/name "waiting",
   :block/created-at 1647905261269,
   :block/updated-at 1647905261269}
@@ -552,6 +792,9 @@
  {:block/name "wip",
   :block/created-at 1647652090428,
   :block/updated-at 1647652090428}
+ {:block/name "write follows read",
+  :block/created-at 1650137836777,
+  :block/updated-at 1650140993053}
  {:block/name "wsl",
   :block/created-at 1647652090086,
   :block/updated-at 1647652090086}
@@ -561,6 +804,15 @@
  {:block/name "xfce",
   :block/created-at 1648486574385,
   :block/updated-at 1648499801089}
+ {:block/name "y-axis scaling",
+  :block/created-at 1650392404314,
+  :block/updated-at 1650392409550}
+ {:block/name "yml",
+  :block/created-at 1650049005332,
+  :block/updated-at 1650049005332}
  {:block/name "yugabytedb",
-  :block/created-at 1648425011560, 
-  :block/updated-at 1648425011560}]
+  :block/created-at 1648425011560,
+  :block/updated-at 1648425011560}
+ {:block/name "zookeeper",
+  :block/created-at 1650152164896, 
+  :block/updated-at 1650152164896}]

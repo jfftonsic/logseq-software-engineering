@@ -1,0 +1,6 @@
+- New features
+	- non-blocking capable HTTP Client
+		- `java.net.http`
+		- `java.utiol.concurrent.flow` API
+	- Flight recorder
+	- No-op GC

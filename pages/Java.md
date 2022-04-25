@@ -1,7 +1,16 @@
 - [[Java Collections]]
 - [[Java Module System]]
 -
+- Specific Java version features
+	- [[Java 10]]
+	- [[Java 11]]
+	- [[Java 12]]
+	- [[Java 13]]
+	- [[Java 14]]
+	- [[Java 15]]
+-
 - Some useful JVM args as example
+  collapsed:: true
 	- sources:: https://docs.oracle.com/en/java/javase/11/migrate/index.html#JSMIG-GUID-7BB28E4D-99B3-4078-BDC4-FC24180CE82B, [Azul docs Using Java Flight Recorder](https://docs.azul.com/prime/Java-Flight-Recorder)
 	- --add-opens
 	  collapsed:: true

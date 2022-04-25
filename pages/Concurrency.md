@@ -1,26 +1,35 @@
-sources:: [LeonardoZ - java-concurrency-patterns](https://github.com/LeonardoZ/java-concurrency-patterns)
+sources:: [LeonardoZ - java-concurrency-patterns](https://github.com/LeonardoZ/java-concurrency-patterns), [Shipilev - Safe Publication and Safe Initialization in Java](https://shipilev.net/blog/2014/safe-public-construction/)
 
-- [[concurrent data object]] - ((625b5711-4fbb-4514-b49e-ce4648d1a5f6))
-	- [[wait-free implementation of a concurrent data object]]
 - concurreny constructs
+  heading:: true
+  collapsed:: true
 	- [[Lock]]
 	- [[Fencing Token]] - ((625dadd2-8136-4b38-95e4-84b9e6f225e1))
 - Lock approaches
+  heading:: true
+  collapsed:: true
 	- Intrinsic Lock / Monitor Lock
+	  heading:: true
 		- https://docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html
 		- in java = `synchronized`
 	- Explicit
+	  heading:: true
 		- Reentrant
 		- ReadWrite
 - Synchronizers
+  heading:: true
+  collapsed:: true
 	- Latches
 	- Semaphores
 	- Barriers
 - Synchronized collections
+  heading:: true
 - Concurrent collections
+  heading:: true
   collapsed:: true
 	- alternative to the Synchronized Collections, supposedly performs better
 - Executors
+  heading:: true
   collapsed:: true
 	- Thread Pool
 		- Fixed Thread Pool
@@ -30,23 +39,18 @@ sources:: [LeonardoZ - java-concurrency-patterns](https://github.com/LeonardoZ/j
 		- Single Thread Scheduled
 		- Work-Stealing Pool
 - Atomics
+  heading:: true
 - Futures
+  heading:: true
 - Fork/Join Framework
--
--
-- [[DB Transactional Locks]]
--
-- [[Transaction]]
--
-- [[Entity Manager]]
--
-- [[Persistence Context]]
--
-- [[Consistency]]
--
--
--
+  heading:: true
+- Database related
+  heading:: true
+  collapsed:: true
+	- [[DB Transactional Locks]]
+	- [[Transaction]]
 - Concurrency Patterns / Strategies
+  heading:: true
 	- Limiting state to a single thread (Swing, Vaadin, JMonkey Engine, Apache Wicket use this strategy)
 	- Duplicate state to make it local
 	- Make state manipulation and query `synchronized`
@@ -411,22 +415,23 @@ sources:: [LeonardoZ - java-concurrency-patterns](https://github.com/LeonardoZ/j
 				    }
 				  }
 				  ```
-			- #+BEGIN_QUOTE
-			  In this example, we're using static fields, but AtomicReference, Volatile and Final Fields can also an option.
-			  #+END_QUOTE
-			- ```java
-			  public class SafePublishing {
-			  
-			  	public static Object object;
-			  
-			  	static {
-			  		// use static field or a static block to initialize
-			  		// static initialization is safe because it's done automatically locked.
-			  		object = new Object();
-			  	}
-			  
-			  }
-			  ```
+			- Another example using static, from another source
+				- #+BEGIN_QUOTE
+				  In this example, we're using static fields, but AtomicReference, Volatile and Final Fields can also an option.
+				  #+END_QUOTE
+				- ```java
+				  public class SafePublishing {
+				  
+				  	public static Object object;
+				  
+				  	static {
+				  		// use static field or a static block to initialize
+				  		// static initialization is safe because it's done automatically locked.
+				  		object = new Object();
+				  	}
+				  
+				  }
+				  ```
 		-
 	- PatternName
 		- Short description
@@ -435,6 +440,12 @@ sources:: [LeonardoZ - java-concurrency-patterns](https://github.com/LeonardoZ/j
 		- Applicability
 		- Example
 		-
+- Related concepts
+  heading:: true
+  collapsed:: true
+	- [[Consistency]]
+	- [[concurrent data object]] - ((625b5711-4fbb-4514-b49e-ce4648d1a5f6))
+		- [[wait-free implementation of a concurrent data object]]
 - https://www.geeksforgeeks.org/concurrency-control-in-dbms
 - https://www.cs.princeton.edu/courses/archive/spr18/cos518/docs/L3-strong-consistency.pdf
 -
