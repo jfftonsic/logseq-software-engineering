@@ -23,6 +23,7 @@
 		- Mathematical Algorithm
 		- Bit Algorithm
 		- Graph Algorithm
+			- [[Minimum Spanning Tree]]
 		- Randomized Algorithm
 		- Branch and Bound Algorithm
 		- Dynamic Programming
@@ -116,6 +117,7 @@
 			- Audit logging
 			- Application logging
 			- Exception tracking
+			- Deployment Stamps #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/deployment-stamp)
 		- decomposition
 			- decompose by business capability
 			- decompose by domain-driven design subdomain
@@ -124,17 +126,59 @@
 			- Client-side UI composition
 		- security
 			- Access Token
+			- Federated Identity #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/federated-identity)
+			- Gatekeeper #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/gatekeeper)
+		- design and implementation
+			- Backends for Frontends #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends)
+			- Compute Resource Consolidation #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/compute-resource-consolidation)
+			- External Configuration Store #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/external-configuration-store)
+			- Edge Workload Configuration #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/edge-workload-configuration)
+			- Gateway Aggregation #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/gateway-aggregation)
+			- Gateway Offloading #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/gateway-offloading)
+			- Gateway Routing #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/gateway-routing)
+			- Leader Election #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/leader-election)
+			- Pipes and Filters #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/pipes-and-filters)
+			- Sidecar #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/sidecar)
+			- Static Content Hosting #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting)
+			- Strangler Fig #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/strangler-fig)
+		- data #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/category/data-management)
+			- Cache-Aside
+			- CQRS
+			- Event Sourcing
+			- Index Table
+			- Materialized View
+			- Sharding
+			- Static Content Hosting
+			- Valet Key
 		- communication
 			- API Gateway
 			- Circuit Breaker
+			- Ambassador #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/ambassador)
 		- discovery
 			- Server-side Discovery
 			- Client-side Discovery
 		- style
 			- Messaging
+				- Asynchronous Request-Reply #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/async-request-reply)
+				- Claim Check #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/claim-check)
+				- Choreography #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/choreography)
+				- Competing Consumers #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/competing-consumers)
+				- Pipes and Filters #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/pipes-and-filters)
+				- Priority Queue #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/priority-queue)
+				- Publisher-Subscriber #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber)
+				- Queue-Based Load Leveling #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling)
+				- Scheduler Agent Supervisor #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/scheduler-agent-supervisor)
+				- Sequential Convoy #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/sequential-convoy)
 			- Remote Procedure Invocation
+		- consistency
+			- Saga distributed transactions pattern #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/saga/saga)
+			- Compensating Transaction #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction)
+		- resiliency
+			- Anti-corruption Layer #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/anti-corruption-layer)
+			- Throttling #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/throttling) [s2](https://docs.microsoft.com/en-us/azure/architecture/patterns/rate-limiting-pattern)
 	- [[Programming Language]]
 		- [[Java]]
+			- [[Misc tricks]]
 			- [[Java Collections]]
 			  collapsed:: true
 				- [[Java Collections Libraries]]
@@ -180,6 +224,7 @@
 			- [[Spring Security]]
 	- [[Distributed Computing]]
 	- [[Concurrency]]
+	  collapsed:: true
 		- [[Lock]]
 		- [[Consistency]]
 		- Concurrency in databases
