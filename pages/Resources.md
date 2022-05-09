@@ -1,0 +1,23 @@
+- [[Java]]
+	- [[Java Concurrency]]
+		- {{embed ((62793589-9a33-454e-842e-887ce062f721))}}
+- [[System Design]]
+	- {{embed ((6279382e-8880-47d7-92e6-871ee407fc1e))}}
+- [[API]]
+	- [[REST]]
+		- {{embed ((62793ca4-3063-43ea-a2fd-8e64cb2803a6))}}
+- Programming
+	- The Pragmatic Programmer: your journey to mastery
+		- A book from David Thomas, Andrew Hunt
+		- https://www.amazon.com/-/pt/dp-B07VRS84D1/dp/B07VRS84D1/ref=dp_ob_title_def
+	- Clean Code: A Handbook of Agile Software Craftsmanship
+		- A book from Martin Robert C.
+		- https://www.amazon.com/-/pt/Clean-Code-Handbook-Software-Craftsmanship-ebook-dp-B001GSTOAM/dp/B001GSTOAM/
+- [[testing]]
+	- {{embed ((62793d4b-aede-45f0-b07f-1e04e059a0ab))}}
+- Coding Challenges
+	- donnemartin - Interactive Coding Challenges
+		- #+BEGIN_QUOTE
+		  120+ interactive Python coding interview challenges (algorithms and data structures). Includes Anki flashcards.
+		  #+END_QUOTE
+		- https://github.com/donnemartin/interactive-coding-challenges

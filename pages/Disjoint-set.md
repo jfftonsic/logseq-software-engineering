@@ -1,0 +1,3 @@
+- Short description
+	- Keeps track of a set of elements partitioned into a number of disjoint (non-overlapping) subsets. Used in i.e. [[union-find]] algorithm.
+-

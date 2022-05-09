@@ -29,7 +29,7 @@ sources:: https://ebrary.net/64710/computer_science/consistent_prefix_reads
 - transactions properties
   heading:: true
 	- ACID
-		- [[Atomicity]]
+		- [[atomicity]]
 		- [[Consistency]]
 		- [[Isolation]]
 		- [[Durability]]

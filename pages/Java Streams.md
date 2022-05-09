@@ -1,0 +1,11 @@
+- Streams pipeline
+	- source, intermediate operation(s) and a terminal operation.
+- Intermediate operations are lazy.
+	- they will be invoked only if it is necessary for the terminal operation execution.
+- Place intermediate operations which reduce the size of the stream before operations which are applying to each element.
+	- skip(), filter(), and distinct() at the top of our stream pipeline.
+- Java 8 streams can't be reused.
+	- We can only use one terminal operation per stream.
+- stream in parallel mode can be converted back to the sequential mode by using sequential()
+- Tips and tricks
+	- {{embed ((627033ae-c7a9-403b-9741-60b0f87d1a6b))}}

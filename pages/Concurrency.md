@@ -1,5 +1,36 @@
 sources:: [LeonardoZ - java-concurrency-patterns](https://github.com/LeonardoZ/java-concurrency-patterns), [Shipilev - Safe Publication and Safe Initialization in Java](https://shipilev.net/blog/2014/safe-public-construction/)
 
+- Thread Interference
+	- Interference happens when two operations, running in different threads, but acting on the same data, interleave.
+	- This means that the two operations consist of multiple steps, and the sequences of steps overlap.
+- Memory consistency errors
+	- occur when different threads have inconsistent views of what should be the same data.
+	- The key to avoiding memory consistency errors is understanding the [[happens-before]] relationship.
+	- This relationship is simply a guarantee that memory writes by one specific statement are visible to another specific statement.
+	  id:: 626c74e4-bd6b-4f84-819d-820538b54920
+- Characteristics
+  heading:: true
+	- [[Commitment Ordering]]
+	- [[Strict Commitment Ordering]]
+	- [[global serializability]] #WIP <span class="hl-bad-01-bg">(is it the same as [[global ordering]] ?? )</span>
+	- [[global ordering]]
+	- [[generalized autonomy]]
+- Concurrency Control Protocols
+  heading:: true
+	- [[Lock-Based Protocol]]
+	- [[Two Phase Locking Protocol]]
+		- ((626ec4b3-c328-48b5-9dcc-9c205c80678c))
+		- ((626ec541-a10f-4618-b747-54ad77e77301))
+		- ((626ec552-72ba-4b5a-9415-53dd875d5eb0))
+		- ((626ec559-af39-4e59-acd1-ca7f998e01af))
+	- [[Timestamp-Based Protocol]] - ((626ec6fb-bda7-4cb2-bf73-152fa72a5559))
+	- [[Validation-Based Protocol]]
+- Coordination Strategies
+  heading:: true
+  collapsed:: true
+	- [[Guarded Blocks]]
+	  heading:: true
+		- {{embed [[Guarded Blocks]]}}
 - concurreny constructs
   heading:: true
   collapsed:: true
@@ -302,6 +333,7 @@ sources:: [LeonardoZ - java-concurrency-patterns](https://github.com/LeonardoZ/j
 			  ```
 	- Safe Initialization
 	  sources:: https://shipilev.net/blog/2014/safe-public-construction/
+	  collapsed:: true
 		- Short description
 			- Safe initialization makes all values initialized in constructor visible to all readers that observed the object, regardless of whether the object was safely published or not.
 		- How?
@@ -330,6 +362,7 @@ sources:: [LeonardoZ - java-concurrency-patterns](https://github.com/LeonardoZ/j
 			  }
 			  ```
 	- Safe Publishing
+	  collapsed:: true
 		- Short description
 		- Motivations
 			- Publishing an object is making it visible to other parts of the code, outside the current scope, showing the reference to it. If not made properly, the published object can be in an inconsistent state due to the Java Memory Model.
@@ -432,6 +465,106 @@ sources:: [LeonardoZ - java-concurrency-patterns](https://github.com/LeonardoZ/j
 				  
 				  }
 				  ```
+		-
+	- Resource Pool
+	  collapsed:: true
+		- Short description
+		  collapsed:: true
+			- Given a set of limited resources of a kind, establishes a mechanism for acquisition and release of one or more resources by a process.
+		- Motivations
+		  collapsed:: true
+			- You have a limited set of resources of the same kind and want to access operations they support concurrently while respecting the availability of resources.
+		- Example
+			- [code source](https://github.com/LeonardoZ/java-concurrency-patterns/tree/master/src/main/java/br/com/leonardoz/patterns/resource_pool)
+			  ```java
+			  class ResourcePool<T> {
+			  
+			  	private final static TimeUnit TIME_UNIT = TimeUnit.SECONDS;
+			  	private Semaphore semaphore;
+			  	private BlockingQueue<T> resources;
+			  
+			  	public ResourcePool(int poolSize, List<T> initializedResources) {
+			  		this.semaphore = new Semaphore(poolSize, true);
+			  		this.resources = new LinkedBlockingQueue<>(poolSize);
+			  		this.resources.addAll(initializedResources);
+			  	}
+			  
+			  	public T get() throws InterruptedException {
+			  		return get(Integer.MAX_VALUE);
+			  	}
+			  
+			  	public T get(long secondsToTimeout) throws InterruptedException {
+			  		semaphore.acquire();
+			  		try {
+			  			T resource = resources.poll(secondsToTimeout, TIME_UNIT);
+			  			return resource;
+			  		} finally {
+			  			semaphore.release();
+			  		}
+			  	}
+			  
+			  	public void release(T resource) throws InterruptedException {
+			  		if (resource != null) {
+			  			resources.put(resource);
+			  			semaphore.release();
+			  		}
+			  	}
+			  }
+			  
+			  public class ResourcePoolUsage {
+			  	public static void main(String[] args) {
+			  		var executor = Executors.newCachedThreadPool();
+			  		var pool = new ResourcePool<Integer>(15,
+			  				Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10, 11, 12, 13, 14));
+			  		var random = new Random();
+			  		for (int i = 0; i < 30; i++) {
+			  			executor.execute(() -> {
+			  				try {
+			  					var value = pool.get(60);
+			  					System.out.println("Value taken: " + value);
+			  					Thread.sleep(random.nextInt(5000));
+			  					pool.release(value);
+			  					System.out.println("Value released " + value);
+			  				} catch (InterruptedException e) {
+			  					e.printStackTrace();
+			  				}
+			  			});
+			  		}
+			  		executor.shutdown();
+			  	}
+			  }
+			  ```
+	- Condition Queues
+		- sources:: https://flylib.com/books/en/2.558.1/using_condition_queues.html
+		- Short description
+			- Seems to me this just means using `synchronized` + `wait or notify` or `Locks` + `Condition` objects. The <span class="hl-neutral-01">condition queue object</span> is the object on which `wait` and `notify` are invoked.
+		- To use it correctly, identify the condition predicates that the object may wait for.
+		- <span class="hl-bad-01-bg">When using condition waits (Object.wait or Condition.await):</span>
+			- Always have a condition predicate, some test of object state that must hold before proceeding;
+			- Always test the condition predicate before calling wait, and again after returning from wait;
+			- Always call wait in a loop;
+			- Ensure that the state variables making up the condition predicate are guarded by the lock associated with the condition queue;
+			- Hold the lock associated with the the condition queue when calling wait, notify, or notifyAll;
+			- Do not release the lock after checking the condition predicate but before acting on it.
+			- make sure that someone will perform a notification whenever the condition predicate becomes true.
+		- Issues
+			- Waking up too soon
+				- `wait` returning does not necessarily mean that the condition predicate the thread is waiting for has become true.
+			- Missed Signals
+				- Occurs when a thread must wait for a specific condition that is already true, but fails to check the condition predicate before waiting. <span class="hl-neutral-02-bg">Notification is not "sticky"</span>.
+			- Subclass Safety
+				- A state-dependent class should either fully expose (and document) its waiting and notification protocols to subclasses, or prevent subclasses from participating in them at all.
+		- Example
+			- ```java
+			  void stateDependentMethod() throws InterruptedException {
+			   // condition predicate must be guarded by lock
+			   synchronized(lock) {
+			   	while (!conditionPredicate())
+			   		lock.wait();
+			   	// object is now in desired state
+			   }
+			  }
+			  ```
 		-
 	- PatternName
 		- Short description

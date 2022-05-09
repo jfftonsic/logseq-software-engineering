@@ -1,0 +1,2 @@
+- Short description
+	- In [[Atomic Commitment Protocol]], means that <span class="hl-neutral-01">participants do not share concurrency control information</span> .

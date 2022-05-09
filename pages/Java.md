@@ -1,6 +1,8 @@
+- [[Java Streams]]
 - [[Java Collections]]
+- [[Java Concurrency]]
 - [[Java Module System]]
--
+- [[Loitering]]
 - Specific Java version features
 	- [[Java 10]]
 	- [[Java 11]]
@@ -104,3 +106,4 @@
 		- -XX:+DebugNonSafepoints
 		- -Djava.net.preferIPv4Stack=true
 		- -Djdk.attach.allowAttachSelf=true
+- [[functional interface]]

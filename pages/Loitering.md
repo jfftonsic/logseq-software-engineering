@@ -1,0 +1,1 @@
+- Holding a reference to an object when it is no longer needed.

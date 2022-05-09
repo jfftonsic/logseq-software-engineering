@@ -1,0 +1,12 @@
+- Short description
+	- Uses the System Time or Logical Counter as a timestamp to serialize the execution of concurrent transactions. It ensures that every conflicting read and write operations are executed in a timestamp order.
+	  id:: 626ec6fb-bda7-4cb2-bf73-152fa72a5559
+- older transaction is always given priority
+- uses system time to determine the time stamp of the transaction
+- most commonly used concurrency protocol.
+- manage conflicts as soon as an operation is created.
+- advantages
+	- Schedules are serializable just like 2PL protocols
+	- No waiting for the transaction, which eliminates the possibility of deadlocks!
+- disadvantages
+	- [[starvation]] is possible if the same transaction is restarted and continually aborted

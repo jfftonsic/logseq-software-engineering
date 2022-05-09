@@ -3,3 +3,9 @@
 	  id:: 625a0470-24e5-430f-b22a-45f2bab60289
 - In Happens-Before, if one action _**happens-before**_ another action, then everything done in the first action is visible to the second.
 - In other terms, the write operations done by one thread are guaranteed to be visible to a read coming from another thread if the write operation _**happens-before**_ the read operation.
+- actions that create happens-before relationships
+	- synchronization
+	- When a statement invokes Thread.start, every statement that has a happens-before relationship with that statement also has a happens-before relationship with every statement executed by the new thread.
+		- The effects of the code that led up to the creation of the new thread are visible to the new thread.
+	- When a thread terminates and causes a Thread.join in another thread to return, then all the statements executed by the terminated thread have a happens-before relationship with all the statements following the successful join.
+		- The effects of the code in the thread are now visible to the thread that performed the join.
