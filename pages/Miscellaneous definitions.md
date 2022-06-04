@@ -1,0 +1,32 @@
+sources:: ((627ab639-9cec-4c04-87d9-012a65393028))
+
+- [[API Proxy]]
+	- ((62829938-0e63-4541-992f-8af9bd6da629))
+- [[authentication]]
+	- ((6298f64d-7fae-4380-9969-1da8ac6ffa02))
+- [[Authorization]]
+	- ((6298f68f-b81b-4cf8-87a5-bee1bafaf233))
+- [[Backends for Frontends]]
+	- ((62829e3e-0de8-48c4-94f8-ac9bea348f6e))
+- [[claim]]
+	- [[JWT]] context
+		- ((6298fba5-d08f-49b6-9cae-7632c93b95fb))
+- [[Cloud WAF Service]]
+	- ((62829844-d081-4fd8-9538-cebccf044f5d))
+- fault
+	- usually defined as one component of the system deviating from its spec
+- failure
+	- when the system as a whole stops providing the required service to the user
+- [[granted authority]]
+	- ((6298f79a-7be5-45c4-94e9-3d9be85b7444))
+- head-of-line blocking
+	- when a small number of slow requests to hold up the processing of subsequent requests
+- [[Principal]]
+	- ((6298f74f-57c1-49c6-87b7-4b29db306cfc))
+- [[role]]
+	- ((6298f7a9-21e3-4d61-b67c-465128051714))
+- [[security policy]]
+	- ((628298b7-ca55-4cc8-8b95-97ae6bd5340a))
+- [[shim]]
+	- ((62829a24-dd9a-4572-84a5-509f0f704c4f))
+-

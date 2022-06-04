@@ -1,0 +1,9 @@
+- Short description
+	- A [[CDN]] that receive new content whenever changes occur on your server. It is your responsibility for providing content, uploading directly to the CDN.
+- Advantages
+	- <span class="hl-neutral-01">minimizes traffic</span>
+- Disadvantages
+	- . <span class="hl-neutral-01">maximizes storage,</span> you store things that may be long time without use or never used.
+- Good for
+	- Sites with a <span class="hl-neutral-01">small amount of traffic</span> or sites with content that <span class="hl-neutral-01">isn't often updated</span>.
+-

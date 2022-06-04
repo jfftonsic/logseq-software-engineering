@@ -1,0 +1,1 @@
+- https://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html

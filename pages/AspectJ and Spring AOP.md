@@ -1,5 +1,6 @@
 title:: AspectJ and Spring AOP
 sources:: https://guypaddock.github.io/posts/aspectj-native-syntax-with-spring-ltw-and-gradle/, [Aspect Oriented Programming with Spring](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#aop), [AspectJ LTW](https://www.eclipse.org/aspectj/doc/released/devguide/ltw.html), [Aspect-Oriented Programming in Spring Boot Part 2: Spring JDK Proxies vs CGLIB vs AspectJ](https://panlw.github.io/15277821532847.html)
+tags:: AOP
 
 - There are several ways with which the aspects infrastructure is implemented
 	- by proxy (the Spring AOP's way)

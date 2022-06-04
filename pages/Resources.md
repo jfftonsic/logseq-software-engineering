@@ -21,3 +21,12 @@
 		  120+ interactive Python coding interview challenges (algorithms and data structures). Includes Anki flashcards.
 		  #+END_QUOTE
 		- https://github.com/donnemartin/interactive-coding-challenges
+	- How to effectively use LeetCode to prepare for interviews!!
+		- https://leetcode.com/discuss/career/449135/How-to-effectively-use-LeetCode-to-prepare-for-interviews
+- Network
+	- EDUCBA - networking and security
+		- https://www.educba.com/software-development/software-development-tutorials/network-security-tutorial/
+		- seems to be a great source for networking and security related educational information
+	- Nginx - layer 4 load balancing
+	  id:: 627c105f-1db3-4eff-94ca-2f10b0a8706b
+		- https://www.nginx.com/resources/glossary/layer-4-load-balancing/

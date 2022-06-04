@@ -1,2 +1,5 @@
 - [[OpenAPI]]
+- [[REST]]
 -
+- Design
+	- If the interfaces are too restrictive people will work around them, negating their benefit, so this is a tricky balance to get right.

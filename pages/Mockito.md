@@ -63,7 +63,6 @@ sources:: https://www.lambdatest.com/blog/junit5-mockito-tutorial/, https://java
 	  }
 	  ```
 - Captor: used to create an `ArgumentCaptor` instance to capture method argument values for further assertions.
-  collapsed:: true
 	- ```java
 	  @Mock
 	  HashMap<String, Integer> MyMap;

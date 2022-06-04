@@ -95,12 +95,43 @@
 - Collections
   heading:: true
   collapsed:: true
+	- ((62794a47-a83f-4650-91c9-5468c5334ee8))
+	- Simple building unmodifiable collections
+		- ```java
+		  List.of(a, b, c);
+		  Set.of(d, e, f, g);
+		  Map.ofEntries(
+		      entry(k1, v1),
+		      entry(k2, v2),
+		      entry(k3, v3));
+		  ```
 	- Set intersection (or lots of other collections also)
 		- `retailAll` method
+	- Reverse
+		- `Collections : void reverse(list)`
+	- Swapping elements from list
+		- `Collections : void swap(list, i, j)`
+	- Rotate the elements in a list by a distance.
+		- `Collections : void rotate(list, distance)`
+	- Count number of elements in a collection equal to an object
+		- `Collections : int frequency(Collection c, Object o)`
+	- Build an immutable set containing only a object. The returned set is serializable.
+		- `Collections : <T> Set<T> singleton[List/Map](T o)`
+	- Query if two specified collections have no elements in common
+	  id:: 6279471e-2cc8-4ebb-a613-790e845932f4
+		- `Collections : boolean disjoint(Collection c1, Collection c2)`
+	- Replace all of the elements of the specified list with the specified element
+		- `Collections : void fill(List<? super T> list, T obj)`
+	- Return starting position of first/last occurrence of a target list within a source list
+		- `Collections : int [last]indexOfSubList(source, target)`
 - Streams
   id:: 627033ae-c7a9-403b-9741-60b0f87d1a6b
   heading:: true
   collapsed:: true
+	- Iterable to stream
+		- ```java
+		  StreamSupport.stream(iterable.spliterator(), false)
+		  ```
 	- Concatenation of streams
 		- `Stream.concat(...)`
 	- Stream creation

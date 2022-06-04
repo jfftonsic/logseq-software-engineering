@@ -6,11 +6,71 @@ tags:: Frameworks
 - [[Spring Data]]
 - [[Spring Web]]
 - [[Spring Integration]]
+- [[Spring Localization]]
 -
+- Tips and tricks
+  heading:: true
+	- Building URI/URL 's
+	  collapsed:: true
+		- ```java
+		          UriComponentsBuilder.newInstance()
+		                  .scheme(URIScheme.HTTP.getId())
+		                  .host("host")
+		                  .port(8000)
+		                  .path("/employee")
+		                  .pathSegment("{employeeName}", "{anotherThing}")
+		                  // this build(xxx) will automatically perform encoding
+		                  .build("John", "YetMoreData")
+		                  .toURL();
+		  ```
+	- Building `HttpHeaders` from a `HttpServletRequest`
+	  collapsed:: true
+		- ```java
+		  // ...
+		  import org.springframework.data.util.Pair;
+		  import org.springframework.http.HttpHeaders;
+		  import javax.servlet.http.HttpServletRequest;
+		  //...
+		  	public HttpHeaders getHttpHeaders(HttpServletRequest request) {
+		          final var httpHeaders = new HttpHeaders();
+		  
+		          Collections.list(request.getHeaderNames()).stream()
+		                  .mapMulti(
+		                          (String headerKey, Consumer<Pair<String, String>> consumer) ->
+		                                  Collections.list(request.getHeaders(headerKey))
+		                                          .forEach(
+		                                                  value -> consumer.accept(Pair.of(headerKey, value))
+		                                          )
+		                  ).forEach(pair -> httpHeaders.add(pair.getFirst(), pair.getSecond()));
+		  
+		          return httpHeaders;
+		      }
+		  ```
+	- A `mockMvc` test example
+	  collapsed:: true
+		- ```java
+		          mockMvc.perform(
+		                          post(
+		                                  UriComponentsBuilder.newInstance()
+		                                          .path(EMPLOYEE_SVC_URI)
+		                                          .pathSegment("{employeeName}")
+		                                          .build("John")
+		                          )
+		                                  .with(
+		                                          SecurityMockMvcRequestPostProcessors
+		                                                  .user(VALID_ADMIN_USER)
+		                                                  .password(VALID_ADMIN_PASSWORD)
+		                                                  .authorities(new SimpleGrantedAuthority(ROLE_ADMIN))
+		                                  )
+		                  )
+		                  .andDo(print())
+		                  .andExpect(status().isOk())
+		                  .andExpect(content().contentType(MediaType.APPLICATION_JSON));
+		  ```
 - Spring fast documentation links
+  collapsed:: true
   #WIP
 	- [[Spring Boot]]
-	  collapsed:: true
 		- [Everything in single html](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle)
 		- [Index of the documentation in separate htmls](https://docs.spring.io/spring-boot/docs/current/reference/html/index.html)
 		- [Application properties reference](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html#appendix.application-properties)

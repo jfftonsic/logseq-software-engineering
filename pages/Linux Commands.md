@@ -2,7 +2,8 @@
   heading:: true
 	- Set ABNT2 keyboard layout
 	  heading:: true
-		- ```bash
+		- id:: 62926ead-aea5-49e5-be23-efb2315b162e
+		  ```bash
 		  setxkbmap -model abnt2 -layout br
 		  ```
 - Network
@@ -233,6 +234,10 @@
 			  if squid is already up, call
 			  sudo squid3 -k reconfigure
 			  ```
+	- Sending raw binary things (be it text or not) to any listening server (probably works not only for network things)
+		- `dd if=any_file_bin_or_not > /dev/tcp/10.138.20.235/4080`
+	- Getting ip only, attributed to a device
+		- `ip addr show dev eth0 | grep "inet " | awk '{print $2}' | sed 's/\/.*//'`
 - Security
   heading:: true
   collapsed:: true
@@ -251,10 +256,189 @@
 	-
 - File
   heading:: true
-	-
-- Network
+	- tail
+		- ```bash
+		  tail ---disable-inotify --retry -f /tmp/binance-integration.log
+		  
+		  ---disable-inotify = when using WSL and tailing a file that is out of the linux file system
+		  --retry = if the file gets truncated (and a new one with same name is beginning to get written), without this tail will stop following.
+		  
+		  ```
+	- Find in files
+		- `grep -r --include="*.kts" "if (project.hasProperty(\"jvmArgs\")" ~/workspace`
+	- Rename multiple files
+		- `find . -name '*Elo*' -type f -exec bash -c 'mv "$1" "${1/Elo/Master}"' -- {} \;`
+	- Replace in files
+		- `find . -type f -exec sed -i 's/ELO/MASTER/g' {} +`
+	- Appending to files
+		- ```bash
+		  echo "text here" >> filename 
+		  command >> filename 
+		  date >> filename 
+		  printf "\nTEXT HERE\n$(ls)" >> lists.txt 
+		  echo '104.20.186.5 www.cyberciti.biz' | sudo tee -a /etc/hosts         # when using sudo 
+		  sudo sh -c 'echo my_text >> file1'                                     # when using sudo 
+		  sudo -- bash -c 'echo "some data" >> /my/path/to/filename.txt'         # when using sudo 
+		  echo 'text' &>>filename                                                # appending also the stderr
+		  
+		  ```
+	- Find files and remove
+		- ```bash
+		  find /dir/to/search/ -type f -name "FILE-TO-FIND-Regex" -exec rm -f {} \;
+		  -type f : Only match files and do not include directory names.
+		  -type d : Only match dirs and do not include files names.
+		  Modern version of find command has -delete option too
+		  -maxdepth option to control descend
+		  
+		  ```
+	- Multiline grep-like example (must install pcregrep tool)
+		- ```bash
+		  pcregrep -M "08407A00000000310109B02E800\",nsuTerminal=2485]( )*\R( )*ps.swt.tlv.exception.SwitchServiceException: null" /export/logs/pagseguro-switch-server/pagseguro-switch.log
+		  ```
+	- List folder and subfolders sizes ordered
+		- `sudo du -h --max-depth=2 . | sort -h 2> /dev/null     # sudo only if folders with those permissions are wanted; choose your max-depth; The "2> /dev/null" is if you want it to not show the errors it gets trying to access things that it can't.`
+	- To unzip protected zip files
+		- ```bash
+		  # (normal unzip may result in "need PK compat. v5.1 (can do v4.5)"
+		  7z x protected.zip
+		  ```
+	- Untar
+		- `tar.gz, untar, comando: tar -C [pasta] -xzf [arquivo.tar.gz]`
+	- Removing n characters from a line's beginning and then sort the file's contents
+		- `cut -c 12- ./v2/UPSRA83020160614183101.TXT | sort > ./v2/sortedUPSRA83020160614183101.TXT`
+	- Copying everything from one directory to another also showing the progress
+		- `sudo rsync -arh --progress --ignore-existing /opt /media/user/`
+	- Shows all file systems, the type, usage, free space, where are they mounted to
+		- `df -Tak`
+	- Files have special attributes/flags
+		- ```
+		  Files have special attributes/flags, to show them: 
+		  lsattr 
+		  to change them: 
+		  chattr 
+		  
+		  Some of the flags: 
+		  a : append only 
+		  c : compressed 
+		  d : no dump 
+		  e : extent format 
+		  i : immutable -> blocks file modification 
+		  j : data journalling 
+		  s : secure deletion 
+		  t : no tail-merging 
+		  u : undeletable 
+		  A : no atime updates -> don't update last read marking when reading the file 
+		  C : no copy on write 
+		  D : synchronous directory updates -> only frees the thread that makes the write after the bytes were really applied to hard disk.
+		  S : synchronous updates 
+		  T : top of directory hierarchy
+		  
+		  ```
+	- Print binary file contents in binary or hex
+		- ```
+		  For bin :xxd -b file
+		  For hex: xxd file
+		  Also: hexdump -C yourfile.bin
+		  ```
+- Process
   heading:: true
+	- Start process in background
+		- follow a command with &
+	- Process search
+		- ```bash
+		  pgrep <regex_to_match_process_name> # shows PID, -a: also shows full command line, -f: regex will match full command line
+		  ```
+	- keep processes running even after exiting the shell
+		- ```bash
+		  prevents the processes or jobs from receiving the SIGHUP (Signal Hang UP) signal. 
+		  nohup <command> <arguments>
+		  # will ignore input and append output to nohup.out, or you redirect output with "> output.txt" or "> myoutput.txt >2&1" if u want also the stderr.
+		  ```
+	- Killing first process of a grepped ps aux
+		- ```bash
+		  kill -9 $(ps aux | grep 'applicationwhatever' | awk '{print $2}') 
+		  or 
+		  ps aux | egrep "java -jar.*applicationwhatever" | grep -v grep | awk '{print $2}' | xargs sudo kill 
+		  ```
+	- Prevent ps aux grep from showing itself on the results
+		- `ps aux | grep "[f]nord"`
+	- Searching processes that are opening a file
+		- `lsof -n | grep filename`
+	- Show file descriptors hold by a process
+		- `lsof -n -p 113`
+	- /proc folder
+		- ```
+		  /proc has informations of system and processes 
+		  /proc/<PID>/limits 
+		  /proc/<PID>/environ 
+		  /proc/<PID>/cpuset 
+		  /proc/<PID>/fd 
+		  /proc/<PID>/status 
+		  
+		  ```
 	-
-- Network
+- Terminal
   heading:: true
-	-
+	- Searching history for regex matches
+		- `history | grep -E "regex"`
+	- Shortcuts
+		- ```
+		  Alt+d: delete word from cursor forwards, stops at whitespaces and non-word chars e.g.: ‘-’
+		  Alt+backspace: delete word from cursor backwards, stops at whitespaces and non-word chars e.g.: ‘-’
+		  Ctrl+w: delete word from cursor backwards, but only stops at whitespaces.
+		  
+		  Stop process 
+		  ctrl+z 
+		  then commands: 
+		  fg -> returns execution of the stopped process to the foreground 
+		  bg -> returns execution of the stopped process to the background
+		  
+		  The obvious ones: 
+		  ctrl+c: kill foreground process
+		  etc
+		  ```
+-
+- System
+  heading:: true
+	- Show linux distro and release:
+		- ```bash
+		  lsb_release -a 
+		  Example of what it shows on ubuntu: 
+		  No LSB modules are available. 
+		  Distributor ID: Ubuntu 
+		  Description:    Ubuntu 20.04.2 LTS 
+		  Release:        20.04 
+		  Codename:       focal
+		  ```
+	- Changing system properties
+		- `sysctl`
+		- Some important system properties
+			- ```
+			  # 0 - 100 (0 = only ram, 100 = only swap) 
+			  vm.swappiness = 60 
+			  
+			  # controls the machine firewall's maximum of sessions 
+			  net.netfilter.nf_conntrack_max = 65536 
+			  
+			  # timeout for the kernel to free closed connections 
+			  net.ipv4.tcp_fin_timeout = 30 
+			  
+			  # system's max file descriptors that can be opened 
+			  fs.file-max = 1000000 
+			  
+			  ```
+	- System calls
+		- ```bash
+		  strace 
+		  strace -f -p
+		  ```
+	- For distros that use apt
+		- ```bash
+		  sudo apt update # download package information from all configured sources. Do it before 'upgrade' 
+		  sudo apt upgrade # install available upgrades of all packages currently installed 
+		  sudo apt <install/reinstall/remove/purge> XXX # the XXX may be a regex, glob or exact name. Each name may be followed with a '=<version>'. 
+		  apt search <regex> # looks for packages with name or description that matches the input 
+		  apt show <package> # show info for the pkg (dependencies, installation and download size, ...)
+		  apt-file list <pkg> # list contents of a pkg, may also be 'show' 
+		  apt-file search <pattern> # search which pkgs contain a file (doesn't match folders), may also be 'find'
+		  ```

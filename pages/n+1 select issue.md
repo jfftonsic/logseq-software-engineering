@@ -1,0 +1,19 @@
+-
+- sources:: https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping
+- Short description
+	- The N+1 query problem happens when the data access framework executed N additional SQL statements to fetch the same data that could have been retrieved when executing the primary SQL query.
+- slow query log doesn't show the problem
+	- unlike the slow query log that can help you find slow running queries, the N+1 issue won’t be spot because each individual additional query runs sufficiently fast to not trigger the slow query log.
+- [[Hibernate]]'s fetch type EAGER is prone to this issue
+	- map the attribute with LAZY and use JOIN FETCH on a jpql or an [[EntityGraph]]
+- Given an entity Cars, that owns a set of entity Wheel
+- say you need to display information on the wheels of each and all the cars
+- the naive solution
+	- `SELECT * FROM Cars;`
+	  And then for each Car:
+	- `SELECT * FROM Wheel WHERE CarId = ?`
+- In other words, you have one select for the Cars, and then `N` additional selects, where `N` is the total number of cars.
+- Alternatively, one could get all wheels and perform the lookups in memory:
+	- `SELECT * FROM Wheel`
+- reduces the number of round-trips to the database from N+1 to 2. Most ORM tools give you several ways to prevent N+1 selects.
+-

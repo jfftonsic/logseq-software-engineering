@@ -4,6 +4,9 @@ sources:: [Using VcXsrv Windows X Server](https://sourceforge.net/p/vcxsrv/wiki/
 	- The config file is at `~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml`
 	- Easiest way to change hotkeys
 		- Go to Menu `Applications`->`Settings`->`Window Manager`. Select tab `Keyboard`.
+- Configure keyboard layout at session start
+	- go to `Applications`->`Settings`->`Session and Startup` and add the command
+	  {{embed ((62926ead-aea5-49e5-be23-efb2315b162e))}}
 - Using XFCE with [[WSL]] and [[VcXSrv]]
 	- Run [[VcXSrv]] with `One large window`, and the check box to disable auth checked.
 		- You may or may not want to use `-keyhook` at the XLaunch text box for extra arguments.

@@ -1,0 +1,16 @@
+- Short description
+	- A strategy for increasing [[scalability]] and [[reliability]], and possibly also [[efficiency]], [[fault-tolerance]], [[throughput]].
+- It can appear in various contexts, but usually it is related to data-related services, such as databases, queues, etc.
+- Types
+	- [[master-slave replication]]
+	- [[master-master replication]]
+- Disadvantages
+	- For data storing replication
+		- Extra, potentially very high, storage needed.
+	- More hardware and additional complexity setting up and maintaining the environment.
+	- There is a potential for loss of data
+		- if the master fails before any newly written data can be replicated to other nodes.
+	- Writes are replayed to the read replicas.
+		- If there are a lot of writes, the read replicas can get bogged down with replaying writes and can't do as many reads.
+	- The more read slaves, the more you have to replicate, which leads to <span class="hl-neutral-01">greater replication lag</span>.
+	- On some systems, writing to the master can spawn multiple threads to write in parallel, whereas read replicas only support writing sequentially with a single thread.

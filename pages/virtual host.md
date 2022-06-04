@@ -1,0 +1,23 @@
+sources:: https://www.educba.com/virtual-host/
+
+- Short description
+	- A virtual host is a configuration entity that <span style="color: orange">enables a single host machine to resemble multiple host machines</span>.
+- It maintains a list of Multipurpose Internet Mail Extensions (MIME) types that it processes.
+- You can associate
+	- a virtual host to one or more web modules,
+	- each web module with one and only one virtual host.
+- Configurations can be
+	- Name Based
+		- The most commonly and frequently used technique
+		- will use the single IP address for all the domains on the given server.
+		- When the browser is trying to connect to the server, it will send a message to the server informing about the domain name to which it is trying to connect.
+		- When the domain name is provided, the server checks the host configuration and thereby returns the request with the correct website.
+	- IP Based
+		- This virtual hosting is achieved by creating multiple IP addresses for a single server.
+			- The multiple IPs will actually point to the server’s unique domains, and there would only be one IP for a server.
+		- Different IPs for each domain.
+		- can be used to apply different directives based on the IP address.
+	- Port-Based
+		- similar to IP-based virtual hosting; the difference is
+			- Instead of using the different IP address for each of the virtual hosts, we use different ports in which the servers are configured to respond to multiple websites that are dependent on the port of the server.
+- [[Apache HTTP Server]]

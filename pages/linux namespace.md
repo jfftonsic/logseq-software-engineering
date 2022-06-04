@@ -1,0 +1,14 @@
+-
+- Allows
+	- process isolation.
+	- each container  to have its process tree, mounting points, etc.
+- PID namespaces
+	- The processes running inside containers can be seen at the host machine but they will have different PIDs when comparing querying it inside the container or at the host machine.
+- Net namespace
+	- Allows each container to have its network interface and ports.
+	- Normally the case: container gets a eth0 and the host a vethxxxx and a docker0
+		- docker0: a bridge that allows for communication between containers by package routing.
+- Mnt namespace
+	- Isolates file systems.
+	- Allows containers to be owners of their mounting point and root file system.
+- IPC / UTS / User namespaces are other, more hardcore types of isolation that I’ll not delve into.

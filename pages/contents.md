@@ -11,10 +11,15 @@
 - [[Logseq plugins used with this knowledge base]]
 - [[Software Engineering]]
 	- [[Tips and Snippets]]
+	- [[Best practices]]
 	- [[Algorithm]]
-	  collapsed:: true
 		- Searching and Sorting Algorithm
 			- [[union-find]]
+			- [[Selection Sort]]
+			- [[Insertion Sort]]
+			- [[Shell Sort]]
+		- [[Shuffling]]
+		- [[Convex Hull]]
 		- Pattern Searching Algorithm
 		- String Algorithms
 		- Greedy Algorithm
@@ -29,7 +34,6 @@
 		- Branch and Bound Algorithm
 		- Dynamic Programming
 	- [[Data Structure]]
-	  collapsed:: true
 		- Arrays/Lists
 			- Array
 			- Linked List
@@ -105,8 +109,8 @@
 		- Architectural approach
 		  collapsed:: true
 			- [[Microservice]]
+			- [[Serverless]] #WIP
 		- Architectural Patterns
-		  collapsed:: true
 			- cross-cutting concerns
 				- Microservice Chassis
 				- Externalized Configuration
@@ -132,7 +136,7 @@
 				- Federated Identity #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/federated-identity)
 				- Gatekeeper #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/gatekeeper)
 			- design and implementation
-				- Backends for Frontends #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends)
+				- [[Backends for Frontends]]
 				- Compute Resource Consolidation #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/compute-resource-consolidation)
 				- External Configuration Store #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/external-configuration-store)
 				- Edge Workload Configuration #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/edge-workload-configuration)
@@ -145,7 +149,7 @@
 				- Static Content Hosting #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting)
 				- Strangler Fig #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/strangler-fig)
 			- data #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/category/data-management)
-				- Cache-Aside
+				- [[Cache-Aside]]
 				- CQRS
 				- Event Sourcing
 				- Index Table
@@ -174,12 +178,18 @@
 					- Sequential Convoy #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/sequential-convoy)
 				- Remote Procedure Invocation
 			- consistency
-				- Saga distributed transactions pattern #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/saga/saga)
+				- [[Saga]] distributed transactions pattern
 				- Compensating Transaction #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction)
 			- resiliency
 				- Anti-corruption Layer #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/anti-corruption-layer)
 				- Throttling #WIP [s](https://docs.microsoft.com/en-us/azure/architecture/patterns/throttling) [s2](https://docs.microsoft.com/en-us/azure/architecture/patterns/rate-limiting-pattern)
+		- Architectural Elements
+			- [[Content Delivery Network]]
+			- [[Domain Name System]]
+			- [[Load Balancer]]
+		- [[data-intensive application]]
 	- [[Programming Language]]
+	  collapsed:: true
 		- [[Java]]
 			- [[Java Concurrency]]
 				- [[Java Concurrency Stress]]
@@ -234,6 +244,7 @@
 	- [[Distributed Computing]]
 	- [[Concurrency]]
 	  collapsed:: true
+		- [[Locking]]
 		- [[Lock]]
 		- [[Consistency]]
 		- Concurrency in databases
@@ -312,6 +323,7 @@
 		  collapsed:: true
 			- [[gradle]]
 			- [[JitPack]] : ((62448ec2-3c79-49db-b279-cb949a1fc694))
+			- [[Buildpacks]]
 		- Distributed Coordination
 			- [[Apache ZooKeeper]]
 	- [[Windows]]
@@ -320,29 +332,32 @@
 	- [[Diagram Generation]]
 	- [[Chart]]
 	- Characteristics / Properties of Systems
-	  collapsed:: true
 		- [[atomicity]]
-		- [[reliability]]
-		- [[recoverability]]
-		- [[distributed recoverability]] #WIP
-		- [[serializability]]
-		- [[global serializability]]
-		- [[distributed serializability]]
-		- [[scalability]]
-		- [[fault-tolerance]]
 		- [[correctness]]
 		- [[efficiency]]
+		- [[distributed recoverability]] #WIP
+		- [[distributed serializability]]
+		- [[fault-tolerance]]
+		- [[global serializability]]
 		- [[latency]]
 		- [[liveness]]
-		- [[timeliness]]
+		- [[maintainability]]
 		- [[observability]] #WIP
+		- [[recoverability]]
+		- [[reliability]]
+		- [[resiliency]]
+		- [[response time]]
+		- [[scalability]]
+		- [[serializability]]
 		- [[Single System Image]]
+		- [[throughput]]
+		- [[timeliness]]
 	- State of Systems
 	  collapsed:: true
 		- [[Availability]]
 		- [[Partitioning]]
 	- General Definitions
-	  collapsed:: true
 		- [[consensus number]]
 		- [[consensus problem]]
-	- [[Resources]]
+- [[Resources]]
+- [[Miscellaneous definitions]]

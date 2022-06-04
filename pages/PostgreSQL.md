@@ -5,7 +5,6 @@ tags:: Database, Relational Databases
 	- When specifying that a column's type is e.g. `character(10)`, when you query that later and you inserted e.g. "abc", the resulting String on java will actually be "abc       " , in other words, it pads your value to fill the length of the column and that gets to be the actual value on the database.
 	  To avoid this, if you want, use `character varying(n)`
 - types:
-  collapsed:: true
 	- <table border="1">
 	      <colgroup>
 	          <col>

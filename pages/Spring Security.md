@@ -1,5 +1,21 @@
-sources:: [Baeldung - Spring @EnableWebSecurity vs. @EnableGlobalMethodSecurity](https://www.baeldung.com/spring-enablewebsecurity-vs-enableglobalmethodsecurity), [EnableWebSecurity reference docs](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/web/configuration/EnableWebSecurity.html), [GlobalMethodSecurityConfiguration reference docs](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/method/configuration/GlobalMethodSecurityConfiguration.html), [Spring Security Method Level Annotations Example](https://memorynotfound.com/spring-security-method-level-annotations-example/)
+sources:: [Baeldung - Spring @EnableWebSecurity vs. @EnableGlobalMethodSecurity](https://www.baeldung.com/spring-enablewebsecurity-vs-enableglobalmethodsecurity), [EnableWebSecurity reference docs](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/web/configuration/EnableWebSecurity.html), [GlobalMethodSecurityConfiguration reference docs](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/method/configuration/GlobalMethodSecurityConfiguration.html), [Spring Security Method Level Annotations Example](https://memorynotfound.com/spring-security-method-level-annotations-example/), https://www.toptal.com/spring/spring-security-tutorial
 
+- Architecture
+	- ![image.png](../assets/image_1654192433854_0.png)
+	- Filters Chain
+		- intercepts all incoming requests
+		- by default  are registered with the lowest order (are the first filters invoked)
+	- `AuthenticationProvider`
+		- Processes specific types of authentication.
+		- Providers extract user identity information based on credentials from a data source.
+		- e.g. `DaoAuthenticationProvider`
+	- `AuthenticationManager`
+		- A coordinator where you can register multiple providers
+	- `UserDetailsService`
+		- a core interface that loads user-specific data.
+		- In most use cases, authentication providers extract user identity information based on credentials from a database and then perform validation.
+		- exposes the single function:
+			- `loadUserByUsername` accepts username as a parameter and returns the user identity object.
 - Customizing security
 	- `@EnableWebSecurity`
 	  collapsed:: true
@@ -41,6 +57,7 @@ sources:: [Baeldung - Spring @EnableWebSecurity vs. @EnableGlobalMethodSecurity]
 		  #sample #[[Spring Security]] #Security 
 		  we get the benefits of Spring Security's other defenses while also being able to add customizations.
 	- `@EnableGlobalMethodSecurity`
+	  collapsed:: true
 		- #+BEGIN_CAUTION
 		  Annotated security only gets applied when we enter a class via a public method.
 		  #+END_CAUTION

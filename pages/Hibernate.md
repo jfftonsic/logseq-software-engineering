@@ -1,16 +1,52 @@
 tags:: #Frameworks
 
-- ![image.png](../assets/image_1647302053648_0.png)
+- Extra topics
+  heading:: true
+	- [[Hibernate and entity self-references]]
+	- [[Hibernate one-to-one associations and laziness]]
+-
+- Some fast, important points
+  heading:: true
+	- Never use a List if you model a Many-to-Many association. Use a Set.
+	  collapsed:: true
+		- Hibernate handles remove operations on Many-to-Many relationships that are mapped to a java.util.List very inefficiently.
+		- example
+			- ```java
+			  @Entity
+			  public class Book {
+			   
+			      // DON'T DO THIS!!!
+			      @ManyToMany
+			      @JoinTable(name = "book_author", 
+			              joinColumns = { @JoinColumn(name = "fk_book") }, 
+			              inverseJoinColumns = { @JoinColumn(name = "fk_author") })
+			      private List<Author> authors = new ArrayList<Author>();
+			       
+			      ...
+			  }
+			  ```
+		-
+	- Avoid at all costs CascadeTypes REMOVE and ALL
+-
+- Architecture
+  heading:: true
+	- ![image.png](../assets/image_1647302053648_0.png)
 - `org.hibernate.SessionFactory`
-	- You would need one SessionFactory object per database using a separate configuration file. So, if you are using multiple databases, then you would have to create multiple `SessionFactory` objects.
-	  The internal state of a SessionFactory is **immutable**.
-	  This internal state includes **all of the metadata about Object/Relational Mapping**.
+  heading:: true
+  collapsed:: true
+	- You would need one `SessionFactory` object per database using a separate configuration file.
+		- if you are using multiple databases
+			- create multiple `SessionFactory` objects.
+	- The internal state of a `SessionFactory`
+		- is **immutable**.
+		- includes **all of the metadata about Object/Relational Mapping**.
+-
 - [[Transaction]]-related
+  heading:: true
 	- important classes:
 		- `org.hibernate.Session`
 		  id:: 622fd6c4-e34c-47af-b549-1f55f7ba6fab
 		  alias:: Session
-		  collapsed:: true
 			- used to get a physical connection with a database
 			- is lightweight and designed to be instantiated each time an interaction is needed with the database.
 			- The session objects should not be kept open for a long time because they are not usually thread safe and they should be created and destroyed them as needed.
@@ -41,7 +77,8 @@ tags:: #Frameworks
 				     }
 				  ```
 		- `org.hibernate.Transaction`
-			- A transaction is associated with a ((622fd6c4-e34c-47af-b549-1f55f7ba6fab)) and is usually initiated by a call to `Session.beginTransaction()`. A single session might span multiple transactions since the notion of a session (a conversation between the application and the datastore) is of coarser granularity than the notion of a transaction. However, it is intended that there be at most one uncommitted transaction associated with a particular Session at any time.
+			- A transaction is associated with a ((622fd6c4-e34c-47af-b549-1f55f7ba6fab)) and is usually initiated by a call to `Session.beginTransaction()`.
+			- A single session might span multiple transactions since the notion of a session (a conversation between the application and the datastore) is of coarser granularity than the notion of a transaction. However, it is intended that there be at most one uncommitted transaction associated with a particular Session at any time.
 		- `org.hibernate.engine.transaction.internal.TransactionImpl`
 			- #+BEGIN_TIP
 			  If you want some interesting debugging logs, configure DEBUG logger for this class. It will print transaction creations, commits, rollbacks
@@ -68,6 +105,8 @@ tags:: #Frameworks
 				  ```
 -
 - Named queries
+  heading:: true
+  collapsed:: true
 	- naming strategy
 		- you pass your custom name where you use the query (which seems less prone to refactory problems.)
 		- if you don't want to have to specify a name, the default is this syntax: `[entity class name].[name of the invoked query method]`.
@@ -98,6 +137,8 @@ tags:: #Frameworks
 	  ```
 -
 - ResultSet mapping
+  heading:: true
+  collapsed:: true
 	- When using custom native queries and you want to map it to an entity:
 	  
 	  
@@ -128,7 +169,10 @@ tags:: #Frameworks
 	  #+BEGIN_PINNED
 	  <mark style="background-color: orange">I don't know what happens to `item_name` in the example above since it is not a field on Order class.</mark>
 	  #+END_PINNED
+-
 - Interesting errors
+  heading:: true
+  collapsed:: true
 	- `org.postgresql.util.PSQLException: ERROR: FOR UPDATE cannot be applied to the nullable side of an outer join`
 		- Happened when I tried to lock 2 rows in separate tables when one of the sides of the left join didn't have result.
 		  The query in that case was:

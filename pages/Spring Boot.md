@@ -4,3 +4,5 @@
 	- <iframe src="https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html" height="500"></iframe>
 - [[Spring Boot + Liquibase]]
 - [[Spring Boot Testing]]
+- [[Spring Boot Actuator]]
+- [[Spring Boot - Build container images]]
